@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    --text-color: #222;
+    --bkg-color: #fff;
+    --project-img-bg-color: #fff;
+    --primary-color: #3B82F6;
+    --off-white: #F3F4F6;
+    --heading-text-color: black;
+    /* Personalize theme vars */
+    --toggle-button-bg-color: #e9f5ff;
+    --toggle-button-dark-bg-color: #404852;
+    --brightness-icon-color: #fff;
+    /* Navbar vars */
+    --nav-bg-color: var(--primary-color);
+    --nav-hover-color: var(--primary-color);
+    --nav-border-color: none;
+
+    /* Blog variables */
+    --blog-post-date-color: #999;
+    --blog-post-link: #111;
+
+    /** Project variables **/
+    --project-hover: #121212;
+    --project-text: #eee;
+}
+
+body.dark-mode {
+    --text-color: #eee;
+    --bkg-color: #121212;   /*#121212  #15202b*/
+    --project-img-bg-color: var(--nav-bg-color);
+    --heading-text-color: var(--text-color);
+    --secondary-color: var(--nav-bg-color);
+    --border-color: #6B7280;
+
+    /* Navbar vars */
+    --nav-bg-color: #111827;  /*#111827 #2C3750*/
+    --nav-hover-color: var(--bkg-color);
+    --nav-border-color: var(--border-color);
+    
+    /* Social media icons vars */
+    --social-icon-hover-color: var(--primary-color);
+
+    /* Blog variables */
+    --blog-post-date-color: #D1D5DB;
+    --blog-post-link: var(--text-color);
+
+    /* Project variables */
+    --project-hover: #F9FAFB;
+    --project-text: var(--bkg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --text-color: #eee;
+        --bkg-color: #121212;   /*#121212  #15202b*/
+        --project-img-bg-color: var(--nav-bg-color);
+        --heading-text-color: var(--text-color);
+        --secondary-color: var(--nav-bg-color);
+        --border-color: #6B7280;
+        
+        /* Navbar vars */
+        --nav-bg-color: #111827;  /*#111827 #2C3750*/
+        --nav-hover-color: var(--bkg-color);
+        --nav-border-color: var(--border-color);
+
+        /* Social media icons vars */
+        --social-icon-hover-color: var(--nav-border-color);
+
+        /* Blog variables */
+        --blog-post-date-color: #D1D5DB;
+        --blog-post-link: var(--text-color);
+
+        /* Project variables */
+        --project-hover: #F9FAFB;
+        --project-text: var(--bkg-color);
+    }
+
+    body.light-mode {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --project-img-bg-color: #fff;
+        --primary-color: #3B82F6;
+        --off-white: #F3F4F6;
+        --heading-text-color: black;
+        /* Personalize theme vars */
+        --toggle-button-bg-color: #e9f5ff;
+        --toggle-button-dark-bg-color: #404852;
+        --brightness-icon-color: #fff;
+        /* Navbar vars */
+        --nav-bg-color: var(--primary-color);
+        --nav-hover-color: var(--primary-color);
+        --nav-border-color: none;
+
+        /* Blog variables */
+        --blog-post-date-color: #999;
+        --blog-post-link: #111;
+
+        /** Project variables **/
+        --project-hover: #121212;
+        --project-text: #eee;
+    }
+}
+
+body {
+    background-color: var(--bkg-color);
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+/** Containers **/
+
+.container {
+    padding: 0rem 1rem;
+}
+
+.container-center {
+    max-width: 700px;
+    margin: auto;
+}
+
+/** Links **/
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.primary-link {
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+body.dark-mode .primary-link {
+    color: var(--bkg-color);
+    background-color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.secondary-link {
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/** Lists **/
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+/** Navbar **/
+.navigation {
+    background-color: var(--nav-bg-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--nav-border-color);
+    transition: background-color 0.5s;
+}
+
+.navigation .nav-pills {
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+.navigation .link {
+    color: white;
+}
+
+.navigation .link:hover {
+    color: var(--nav-hover-color);
+    background-color: var(--brightness-icon-color);
+    border-radius: 1.5rem;
+}
+
+.nav-pills .list-inline {
+    padding: 0rem 1rem;
+}
+
+.navigation .link-active {
+    font-weight: bold;
+}
+
+/** Responsive CSS for Navbar**/
+@media only screen and (max-width: 700px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 0.7rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+/** Section **/
+.section {
+    padding: 2rem;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.off-white {
+    background-color: var(--off-white);
+}
+
+#section-heading {
+    font-size: 2rem;
+}
+
+body.dark-mode #section-heading{
+    color: var(--heading-text-color);
+    transition: color 0.5s;
+}
+
+
+/** Section for Personalized theme **/
+.section-theme {
+    padding: 0.5rem 1rem;
+}
+.section-theme .personalize-theme {
+    margin-left: auto;
+    width: fit-content;
+    padding: 0.5rem;
+    margin-right: 2rem;
+}
+
+.personalize-theme .toggle {
+    width: 3rem;
+    height: 3rem;
+    background: var(--toggle-button-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.toggle::before {
+    content: "\f186";
+    font-size: 1.2rem;
+	font-family: "Font Awesome 5 Free";
+	color: var(--primary-color);
+	position: center;
+}
+
+body.dark-mode .toggle {
+    background: var(--toggle-button-dark-bg-color);
+    transition: background 0.5s;
+}
+
+body.dark-mode .toggle::before {
+    content: "\f185";
+	color: var(--brightness-icon-color);
+    transition: color 0.5s;
+}
+
+
+/** Responsive CSS for Personalize theme **/
+@media only screen and (max-width: 430px) {
+    .personalize-theme .toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/** Projects Section **/
+.section #project-heading {
+    font-size: 3.5rem;
+}
+
+body.dark-mode .section #project-heading{
+    color: var(--heading-text-color);
+    transition: color 0.5s;
+}
+
+.section #open-source-project-heading {
+    font-size: 3.5rem;
+}
+
+body.dark-mode .section #open-source-project-heading {
+    color: var(--heading-text-color);
+    transition: color 0.5s;
+}
+
+.section .project-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.project-wrapper .project-tile {
+    margin: 2vh auto;
+    padding: 1vh;
+    text-align: center;
+}
+
+.project-tile .project-btns {
+    width: fit-content;
+    padding: 1.2rem 0rem;
+    margin: 0rem auto;
+}
+
+.project-btns .live-project {
+    width: fit-content;
+    margin-right: 0.5rem;
+}
+
+.project-btns .contributions {
+    width: fit-content;
+    margin-right: 0.5rem;
+}
+
+.project-btns .view-src {
+    width: fit-content;
+    margin-left: 0.5rem;
+}
+
+.project-btns .view-org {
+    width: fit-content;
+    margin-left: 0.5rem;
+}
+
+.project-btns a:hover {
+    color: var(--primary-color);
+    background-color: var(--bkg-color);
+    border: 1px solid var(--primary-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+body.dark-mode .project-btns a:hover {
+    background-color: var(--text-color);
+    transition: background-color 0.5s;
+}
+
+.section .project-tile h1 {
+    font-size: 2rem;
+}
+
+.project-wrapper .project-content {
+    display: flex;
+    border: 2px solid var(--text-color);
+    border-radius: 2vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    width: 65vw;
+}
+
+.project-tile .languages-icons {
+    display: -ms-inline-grid;
+}
+
+.project-content .project-img {
+    width: 55%;
+    margin: 1rem 0rem;
+}
+
+.project-content .satark-img {
+    width: 55%;
+    margin: 1rem 0rem;
+}
+
+.project-content .img {
+    width: 50%!important;
+    height: 60vh;
+    object-fit: contain;
+    background-color: var(--project-img-bg-color);
+}
+
+.project-content .bigBang-project-img {
+    width: 70%;
+    object-fit: contain;
+}
+
+.project-tile .project-intro {
+    font-size: 1.2rem;
+}
+
+.project-tile .tech-stack {
+    font-size: 1.4rem;
+}
+
+.project-content p {
+    margin: 1rem 0rem;
+}
+
+.project-wrapper .project-content:hover {
+    background-color: var(--project-hover);
+    color: var(--project-text);
+}
+
+.project-wrapper .project-content:hover .project-img {
+    border: 1px solid var(--project-text);
+}
+
+.project-wrapper .project-content:hover .img {
+    background-color: var(--project-hover);
+}
+
+body.dark-mode .project-wrapper .project-content {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .project-wrapper .project-content:hover {
+    background-color: var(--project-hover);
+    color: var(--project-text);
+}
+
+body.dark-mode .project-wrapper .project-content:hover .project-btns a {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transition: background-color 0.5s;        
+}
+
+@media only screen and (max-width: 650px) {
+    .project-btns .contributions {
+        font-size: 0.8rem;
+    }
+
+    .project-btns .view-org {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .project-wrapper .project-content {
+        display: flex;
+        border: 2px solid var(--text-color);
+        border-radius: 2vw;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh;
+        margin-top: 5vh;
+        margin-bottom: 8vh;
+        width: 50vw;
+    }
+
+    .project-content .project-img {
+        width: 55%;
+    }
+    
+    .project-wrapper .project-content:hover {
+        background-color: var(--project-hover);
+        color: var(--project-text);
+    }
+
+    .project-wrapper .project-content:hover .project-img {
+        border: 1px solid var(--project-text);
+    }
+
+    body.dark-mode .project-wrapper .project-content {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+    }
+
+    body.dark-mode .project-wrapper .project-content:hover {
+        background-color: var(--project-hover);
+        color: var(--project-text);
+    }
+
+    body.dark-mode .project-wrapper .project-content:hover .project-btns a {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        transition: background-color 0.5s;        
+    }
+
+    .project-btns .live-project {
+        font-size: 1rem;
+    }
+
+    .project-btns .view-src {
+        font-size: 1rem;
+    }
+    
+    .project-btns .contributions {
+        font-size: 0.8rem;
+    }
+
+    .project-btns .view-org {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .project-btns .live-project {
+        font-size: 0.6rem;
+    }
+
+    .section #open-source-project-heading {
+        font-size: 2.5rem;
+    }
+
+    .project-content .img {
+        width: 162px!important;
+        height: 367px;
+    }
+
+    .project-btns .view-src {
+        font-size: 0.6rem;
+    }
+
+    .project-content .project-img {
+        width: 65%;
+    }
+
+    .project-tile .project-intro {
+        font-size: small;
+    }
+
+    .project-tile .languages-icons img {
+        width: 60px;
+        height: 20px;
+    }
+
+    .section .project-tile h1 {
+        font-size: 1.4rem;
+    }
+
+    .project-btns .live-project {
+        margin-right: 0.3rem;
+    }
+    
+    .project-btns .view-src {
+        margin-left: 0.3rem;
+    }
+
+    .project-tile .tech-stack {
+        font-size: 1rem;
+    }
+
+    .project-btns .contributions {
+        font-size: 0.45rem;
+        margin-right: 0.3rem;
+    }
+
+    .project-btns .view-org {
+        font-size: 0.45rem;
+        margin-left: 0.3rem;
+    }
+}
+
+/** Footer for other pages **/
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+body.dark-mode .footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-top: 1px solid var(--text-color);
+}
+
+.footer .footer-content {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content .other-page-social-media {
+    padding: 0rem 1rem;
+    margin: 0.5rem 0rem;
+}
+
+.footer-content #other-page-footer-para {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+.footer-content .footer-link {
+    color: white;
+} 
+
+.footer-content .other-page-social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.footer-content .other-page-social-list-inline .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .footer-content .other-page-social-list-inline .icon {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.footer-content .other-page-social-list-inline .icon ion-icon:hover {
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+body.dark-mode .footer-content .other-page-social-list-inline .icon ion-icon:hover {
+    color: var(--primary-color);
+    transition: color 0.5s;
+}
+
+body.dark-mode .footer-content .footer-link {
+    color: var(--text-color);
+} 
+.footer-content .other-page-social-list-inline .social-link {
+    text-decoration: none;
+}
+
+.footer-content .other-page-social-list-inline .icon ion-icon {
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 500px) { 
+    .footer-content #other-page-footer-para {
+        font-size: 0.8rem;
+        margin: 0.5rem 0.7rem;
+    }
+
+    .footer-content .other-page-social-list-inline .icon {
+        height: 1.9rem;
+        width: 1.9rem;
+    }
+
+    .footer-content .other-page-social-list-inline .icon ion-icon {
+        font-size: 1rem;
+    }   
+}

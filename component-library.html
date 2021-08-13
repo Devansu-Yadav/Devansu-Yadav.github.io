@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Component Library</title>
+    <link rel="stylesheet" href="./src/css/component-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <h1>Component Library for Portfolio</h1>
+
+    <hr/>
+    <h2>@typography</h2>
+    <h1>First Heading</h1>
+    <h2>Second Heading</h2>
+    <p>This will be normal text.</p>
+    <small>This will be small text</small>
+
+    <hr />
+    <h2>@containers</h2>
+
+    <h3>@fluid container</h3>
+    <div class="container">Some content will go end to end.
+        Adding some more text to understand how much this container will go.
+    </div>
+
+
+    <h3>@center container</h3>
+    <div class="container container-center">Some content would be centered.
+        Adding some more text to understand how much this container will go.
+    </div>
+    
+    <hr/>
+
+    <h2>@links</h2>
+    <a class="link primary-link" href="/">Primary link</a>
+    <a class="link secondary-link" href="/">Secondary link</a>
+
+    <hr />
+
+    <h2>@lists</h2>
+    
+    <h3>Unordered lists with bullets</h3>
+    <ul>
+        <li>abc</li>
+        <li>xyz</li>
+    </ul>
+
+    <h3>Unordered lists without bullets(will be removed using CSS)</h3>
+    <ul class="list-non-bullet">
+        <li>abc</li>
+        <li>xyz</li>
+    </ul>
+
+    <h3>Inline lists without bullets(will be styled properly using CSS)</h3>
+    <ul class="list-non-bullet">
+        <li class="list-inline">item one</li>
+        <li class="list-inline">item two</li>
+        <li class="list-inline">item three</li>
+    </ul>
+
+    <h3>Inline lists with bullets(will be styled properly using CSS)</h3>
+    <ul>
+        <li class="list-inline">&bull; item one</li>
+        <li class="list-inline">&bull; item two</li>
+        <li class="list-inline">&bull; item three</li>
+    </ul>
+
+    <hr/>
+
+
+    <h2>@nav</h2>
+    <h3>Nav with all tabs</h3>
+    <nav class="navigation container">
+    <ul class="nav-pills">
+        <li class="list-inline">
+            <a class="link link-active" href="/">Home</a>
+        </li>
+        <li class="list-inline">
+            <a class="link" href="/">Projects</a>
+        </li>
+        <li class="list-inline">
+            <a class="link" href="/">Blogs</a>
+        </li>
+        <li class="list-inline">
+            <a class="link" href="/">About</a>
+        </li>
+    </ul>
+    </nav>
+
+    <hr/>
+    <h2>@header</h2>
+    <header class="hero-container">
+        <div class="hero">
+            <div>
+                <h1 id="header-name">Devansu Yadav</h1>
+                <p id="header-tagline">This is dummy text<p>
+            </div>
+            <img src="./assets/Devansu_Yadav.jpg"/>
+        </div>
+    </header>
+
+    <hr/>
+
+    <h2>@section</h2>
+    <p>There will be many different types of section that I will be having in my portfolio</p>
+
+    <section class="section-theme">
+        <!-- Section containing option to change personal theme wil be below -->
+        <div class="personalize-theme">
+            <input type="checkbox" class="checkbox" id="chk" />
+	        <label class="label" for="chk">
+		        <i class="fas fa-moon"></i>
+		        <i class="fas fa-sun"></i>
+		        <div class="ball"></div>
+	        </label>
+        </div>        
+    </section>
+
+    <script type="text/javascript">
+        const chk = document.getElementById('chk');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark'); 
+        });
+        //Note we will have to adjust other element colors for the Dark Mode also keep it stored in Local storage.
+        //For all of this, follow this guide-> https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+
+    </script>
+
+    <section class="section">
+        <div class="container container-center">
+            <h1 id="section-heading">white section</h1>
+            <div>This is going to be the white section with different content</div>
+            <!-- Section containing my Intro will be below -->
+            <!-- <div class="intro">Some content containing my Intro(This will be another section)</div> -->
+        </div>
+    </section>
+
+    <section class="section off-white">
+        <div class="container container-center">
+            <h1 id="section-heading">off white section</h1>
+            <div>This is going to be the off white section with different content</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <h1 id="section-heading">Projects</h1>
+            <div class="project-wrapper">
+                <div class="project-content">
+                    <div class="project-tile">
+                        <h2>Project Name</h2>
+                        <img id="project-img" src="./assets/turtle-conics.jpg">
+                        <p>Project Introduction. This is some dummy text replace it with actual project description.
+                            Writing some more content to test responsiveness on Mobile and tablets.
+                        </p>
+                        <p>Tech Stack: Python, Java, JS, React, Azure, Nodejs, Android, IOS, Github, Git, HTML, CSS</p>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-tile">
+                        <h2>Project Name</h2>
+                        <img id="project-img" src="./assets/password.jpg">
+                        <p>Project Introduction. This is some dummy text replace it with actual project description.
+                            Writing some more content to test responsiveness on Mobile and tablets.
+                        </p>
+                        <p>Tech Stack: Python, Java, JS, React, Azure, Nodejs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blogs Section -->
+    <section class="section">
+        <ul class="list-non-bullet">
+            <h1 id="section-heading">Blogs</h1>
+            <li>
+                <article class="blog-post container container-center">
+                    <h2 class="blog-post-heading">Blog Post 1</h2>
+                    <p class="blog-post-date">
+                        Posted on
+                        <time datetime="2021-07-14">14-07-2021</time>
+                        <span> • 6 min read</span>
+                    </p>
+                </article>
+            </li>
+
+            <li>
+                <article class="blog-post container container-center">
+                    <h2 class="blog-post-heading">Blog Post 2</h2>
+                    <p class="blog-post-date">
+                        Posted on
+                        <time datetime="2021-07-14">10-07-2021</time>
+                        <span> • 5 min read</span>
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact section on Homepage -->
+    <section class="contact-section">
+        <div class="contact">
+            <h2 id="contact-heading">Let's Talk</h2>
+            <div>
+                <h2 id="contact">
+                    Want to Connect? 
+                    <br>
+                     My Inbox is always open!
+                </h2>
+                <ul class="social-media">
+                    <li class="social-list-inline">
+                        <a class="icon social-link" href="mailto:devansuyadav@gmail.com">
+                            <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-list-inline">
+                        <a class="icon social-link" href="https://github.com/Devansu-Yadav">
+                            <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-list-inline">
+                        <a class="icon social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                            <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-list-inline">
+                        <a class="icon social-link" href="https://twitter.com/DevanshYtweets">
+                            <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-list-inline">
+                        <a class="icon social-link" href="https://devansuyadav.medium.com/">
+                            <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <h2>@footer</h2>
+
+    <h2>Footer for Home page</h2>
+ 
+    <footer class="footer">
+        <div class="footer-content container-center">
+            <p>Made with ♥ by <a class="footer-link" href="https://github.com/Devansu-Yadav">Devansu Yadav</a></p>
+        </div>
+    </footer>
+
+    <h2>Footer for other pages</h2>
+    <footer class="footer">
+        <div class="footer-content container-center">
+            <ul class="other-page-social-media">
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="mailto:devansuyadav@gmail.com">
+                        <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://github.com/Devansu-Yadav">
+                        <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                        <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://twitter.com/DevanshYtweets">
+                        <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://devansuyadav.medium.com/">
+                        <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <p id="other-page-footer-para">Made with ♥ by <a class="footer-link" href="https://github.com/Devansu-Yadav">Devansu Yadav</a></p>
+        </div>
+    </footer>
+</body>
+</html>

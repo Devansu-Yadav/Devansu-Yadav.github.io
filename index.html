@@ -1,239 +1,193 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Devansu Yadav Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansu Yadav | Portfolio</title>
+    <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navigation container">
+        <ul class="nav-pills">
+            <li class="list-inline">
+                <a class="link link-active" href="/index.html">Home</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/projects.html">Projects</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/blogs.html">Blogs</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/about.html">About</a>
+            </li>
+        </ul>
+    </nav>
 
-	<style>
-		a{
-			border-bottom: 0;
-		}
+    <!-- Section containing option to change personal theme wil be below -->
+    <section class="section-theme">
+        <div class="personalize-theme">
+            <div class="toggle"></div>
+        </div>
+    </section>
 
-		#header{
-			padding: 0;
-			padding-top: 52px;
-		}
+    <script type="text/javascript" src="src/js/darkMode.js"></script>
 
-		#header .inner span img{
-			height: 180px;
-			width: 180px;
-			border: 3px solid white;
-			border-radius: 50%;
-		}
+    <!-- Header Section -->
+    <header class="hero-container">
+        <div class="hero">
+            <div>
+                <h1 id="header-name">Devansu Yadav</h1>
+                <p id="header-tagline">Web Developer | Hackathons👨‍💻 | 💝Open Source<p>
+            </div>
+            <div id="hero-image">
+                <img src="./assets/Devansu_Yadav.jpg"/>
+            </div>
+        </div>
+    </header>
 
-		#header .inner h3 a{
-			padding-left: 10px;
-			color: blue;
-			font-size: 18px;
-		}
+    <section class="intro-section off-white">
+        <div class="container intro-container">
+            <div class="intro-content">
+                <h1 id="section-heading">Something About Me,</h1>
+                <p id="my-intro">Hello, I'm <b>Devansu</b>, a <b>Junior</b> CS undergrad from India. I am a <b>passionate self-learner</b>, 
+                   <b>Open source enthusiast</b>, exploring and building projects👨‍💻 using various technologies. <br>
+                   I 💗 to <b>solve real-world problems</b> using the the power of Technology!⚡
+                </p>
+                <ul class="intro-social-media">
+                    <li class="intro-social-list-inline">
+                        <a class="intro-icon intro-social-link" href="mailto:devansuyadav@gmail.com">
+                            <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="intro-social-list-inline">
+                        <a class="intro-icon intro-social-link" href="https://github.com/Devansu-Yadav">
+                            <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="intro-social-list-inline">
+                        <a class="intro-icon intro-social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                            <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                        </a>
+                    </li>
+    
+                    <li class="intro-social-list-inline">
+                        <a class="intro-icon intro-social-link" href="https://twitter.com/DevanshYtweets">
+                            <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                        </a>
+                    </li>
+    
+                    <li class="intro-social-list-inline">
+                        <a class="intro-icon intro-social-link" href="https://devansuyadav.medium.com/">
+                            <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="learn-more">
+                <a class="link-1 link primary-link" href="/about.html">Learn more about Me</a>
+                <a class="link-2 link primary-link" href="#navigate-contact">Get in Touch</a>
+            </div>
+        </div>
+    </section>
 
-		.black{
-			color: black;
-			font-weight: 400;
-		}
-	</style>
+    <section class="blog-section-home">
+        <ul class="list-non-bullet">
+            <h1 id="blog-section-heading-home">Some of my Blogs</h1>
+            <li>
+                <article class="blog-post container container-center">
+                    <a href="">
+                        <img class="blog-img" src="assets/blog-3.png" width="600px" height="300px">
+                    </a>
+                    <p class="blog-post-date">
+                        Posted on
+                        <time datetime="2021-07-14">14-07-2021</time>
+                        <span> • 6 min read</span>
+                    </p>
+                    <a class="link post-link" href="">
+                        <h2 class="blog-post-heading">A Simple Guide to Publishing and maintaining a Python Package on PyPI</h2>
+                    </a>
+                </article>
+            </li>
 
-	<body class="is-preload">
-		<!-- Header -->
-			<section id="header">
-				<div class="inner" style="display: block">
-					<span><img src="images/profile-pic.jpeg"></span>
-					<h1><strong>Devansu Yadav</strong></h1>
-					<h3>CS Undergrad</h3>
+            <li>
+                <article class="blog-post container container-center">
+                    <a href="">
+                        <img class="blog-img" src="assets/blog-1.png" width="600px" height="300px">
+                    </a>
+                    
+                    <p class="blog-post-date">
+                        Posted on
+                        <time datetime="2021-07-14">10-07-2021</time>
+                        <span> • 5 min read</span>
+                    </p>
 
-					<div style="margin-top: 10px; margin-bottom: 30px;">
-						<p><a href="mailto:devansuyadav@gmail.com" class="icon solid alt fa-envelope"><span class="label"></span> devansuyadav@gmail.com</a><span style="padding-left: 20px;"><i class="fa fa-home"></i> Mumbai, India</span></p>
-					</div>
+                    <a class="link post-link" href="">
+                        <h2 class="blog-post-heading">Useful Git Commands that can help you in your Open Source Journey👨‍💻</h2>
+                    </a>
+                </article>
+            </li>
+        </ul>
+        <div class="view-more-blogs container-center">
+            <a class="more-blogs-link link primary-link" href="/blogs.html">View More Blogs</a>
+        </div>
+    </section>
 
-					<h3 style="font-size: 22px; margin-bottom: 60px; margin-top: 40px;">I am a <span class="black">2<sup>nd</sup> Year CS Undergrad</span> and I am passionate about exploring 
-						different technologies.
-						<br>I am a <span class="black">Open Source Contributor</span> on <span class="black">PyPI</span>
-							 and also a <span class="black">Tech Blogger</span> 
-							<a href="https://devansuyadav.medium.com/">check here</a>
-						<br>I am also fascinated about <span class="black">Open Source Development, Competitive Programming, ML.</span>
-						<br>I am kind of an Astrophile <span class="black">(</span>loves gazing stars🌟<span class="black">)</span>, also I love watching Football⚽, reading Astronomy Books📚
-						<br><span class="black">My Tech-stack :-</span> Python, C, C++, Nodejs, Git/Github"
-					</h3>
-				</div>
-			</section>
+    <!-- Contact section-->
+    <section class="contact-section off-white">
+        <div class="flexed-contact-div">
+            <div class="contact" id="navigate-contact">
+                <h2 id="contact-heading">Let's Talk</h2>
+                <div>
+                    <h2 id="contact">
+                        Want to Connect? 
+                        <br>
+                         My Inbox is always open!
+                    </h2>
+                    <ul class="social-media">
+                        <li class="social-list-inline">
+                            <a class="icon social-link" href="mailto:devansuyadav@gmail.com">
+                                <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="social-list-inline">
+                            <a class="icon social-link" href="https://github.com/Devansu-Yadav">
+                                <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="social-list-inline">
+                            <a class="icon social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                                <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                            </a>
+                        </li>
+    
+                        <li class="social-list-inline">
+                            <a class="icon social-link" href="https://twitter.com/DevanshYtweets">
+                                <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                            </a>
+                        </li>
+    
+                        <li class="social-list-inline">
+                            <a class="icon social-link" href="https://devansuyadav.medium.com/">
+                                <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img id="contact-img" src="assets/contact-image.svg" width="550px" height="400px">
+        </div>
+    </section>
 
-		<!-- Two -->
-		<section id="two" class="main style1 special">
-			<div class="container">
-				<header class="major"><h2><b>Projects</b></h2></header>
-				<header class="major"><h2>Useful Python Projects</h2></header>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/morse-code.jpeg" alt="Morse <--> Text Converter" /></span>
-						<h3>Morse Code Translator</h3>
-						<p>
-							<li style="text-align: left;">Morse <--> Text Converter 🆘</li>
-							<li style="text-align: left;">A GUI application used to convert Morse Code message to English and English Text to Morse code.</li>
-							<li style="text-align: left;">It is built according to International Morse code chart.</li>
-							<li style="text-align: left;">Built using Python tkinter for the GUI</li>
-						</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/Devansu-Yadav/SYCAMORE" class="button">Checkout here</a></li>
-						</ul>
-					</div>
+    <footer class="footer">
+        <div class="footer-content container-center">
+            <p>Made with ❤️ by <a class="footer-link" href="https://github.com/Devansu-Yadav">Devansu Yadav</a></p>
+        </div>
+    </footer>
 
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/turtle-conics.jpeg" alt="Turtle Conics" /></span>
-						<h3>Turtle 	Conics</h3>
-						<p>
-							<li style="text-align: left;">It is a Python Package that consists of different Functions for drawing different Mathematical curves/Conic Sections using their Parametric Equations.</li>
-							<li style="text-align: left;">It is built on the “Turtle” Graphics Library of Python.</li>
-							<li style="text-align: left;">The Package provides utility Functions for the Graphics library which has accomplished more than 4000 total downloads and 400 ‘pip’ downloads on PyPI.</li>
-							<li style="text-align: left;">When we provide arguments for the angle,starting position and other parameters it draws these geometric curves.</li>
-						</p>
-						<ul class="actions special">
-							<li><a href="https://pypi.org/project/turtle-conics/" class="button">Checkout here</a></li>
-						</ul>
-					</div>
-
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/password.jpeg" alt="Password Corrector and Validator" /></span>
-						<h3>Password Corrector and Validator</h3>
-						<p>
-							<li style="text-align: left;">A Password Correcting/Suggesting tool built using Python to correct User's Password according to some requirements🔑💻"</li>
-						</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/Devansu-Yadav/PASSWORD-VALIDATOR-AND-CORRECTOR" class="button">Checkout here</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="container" style="padding-top: 100px;">
-				<header class="major"></header>
-				<header class="major"><h2>Cool Projects</h2></header>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/color-detection-tool.jpeg" alt="Color Detection Tool" /></span>
-						<h3>Color Detection Tool</h3>
-						<p>
-							<li style="text-align: left;">A Color Detecting System That Detects Any Color In Images Using Computer Vision And Displays The Color Name 🖍️🎨</li>
-						</p>
-					</div>
-
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/3x3.jpeg" alt="3x3 TicTacToe Game" /></span>
-						<h3>3x3 TicTacToe Game</h3>
-						<p>
-							<li style="text-align: left;">A Simple 3×3 TicTacToe Game Built Using Python's 'Pygame' library🎮</li>
-						</p>
-					</div>
-
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/9x9.jpeg" alt="9x9 TicTacToe Game" /></span>
-						<h3>9x9 TicTacToe Game</h3>
-						<p>
-							<li style="text-align: left;">A Fun And Interesting TicTacToe Game But With A Little Twist That It’s A 9×9 Grid Instead Of A Regular 3×3 Grid 🎮🧩</li>
-						</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/Devansu-Yadav/9x9-TicTacToe" class="button">Checkout here</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- One -->
-		<section id="one" class="main style1">
-			<!-- Education -->
-			<header style="text-align: center;" class="major"><h2><b>Education</b></h2></header>
-			<div class="container" style="padding-bottom: 70px;">
-				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>Thakur College of Science and Commerce</h2></header>
-						<p>Higher Secondary Education, Computer Science, 2019</p>
-					</div>
-
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>University of Mumbai</h2></header>
-						<p>Bachelors, Computer Science Engineering, 2023</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Volunteer Works -->
-			<header style="text-align: center;" class="major"><h2><b>Volunteer Works</b></h2></header>
-			<div class="container" style="padding-bottom: 70px;">
-				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>Tech Phantoms</h2></header>
-						<p>Community Member, India, Sep 2020 - Present</p>
-						<p>
-							<li>Tech Phantoms is an Open Source Tech Community run by CS Undergrads.</li>
-							<li>It is a community that aims to build Open Source tools and help young developers pave their way towards Open Source and learn real world software development.</li>
-							<li>Contributed to the Community’s website which is Open Source and learnt about Open Source Development.</li>
-							<li>I actively participate in various Community hosted events.</li>
-							<br><a style="color: blue;" href="https://www.techphantoms.tech/">Link to the site</a>
-						</p>
-					</div>
-
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>SLoP Program by DSC DA-IICT College</h2></header>
-						<p>Open Source Contributor, India, Oct 2020 - Nov 2020</p>
-						<p>
-							<li>Contributed to different Open Source projects in the SLoP Program organized by Developer Student Clubs, DA-IICT.</li>
-							<li>Secured a top 50 rank out of 150 plus students nationwide who participated in this Open Source Program.
-							<li>Contributed and enhanced the Project repositories by developing new features.</li>
-							<br><a style="color: blue;" href="https://slop.dscdaiict.in/">Link to the site</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Awards -->
-			<header style="text-align: center;" class="major"><h2><b>Awards</b></h2></header>
-			<div class="container" style="padding-bottom: 70px;">
-				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>Top 50 Open Source Contributor</h2></header>
-						<p>Developer Student Clubs, DA-IICT, Nov 2020</p>
-						<p>
-							<li>Secured a top 50 rank out of 150 plus students nationwide who participated in this Open Source Program.</li>
-							<li>Contributed and enhanced the Project repositories by developing few features.</li>
-							<br><a style="color: blue;" href="https://github.com/sinix-dev/sinix.js">Link to the award</a>
-						</p>
-					</div>
-					
-					<div class="col-6 col-12-medium">
-						<header class="major"><h2>Turtle-Conics Python Package Achievement</h2></header>
-						<p>Nov 2020</p>
-						<p>
-							<li>The Python Package on PyPI accomplished 4000+ Total downloads and 400+ 'pip' downloads.</li>
-							<br><a style="color: blue;" href="https://pypi.org/project/turtle-conics/">Link to the award</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="https://www.facebook.com/devansu.yadav.5/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="https://twitter.com/DevanshYtweets" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://github.com/Devansu-Yadav" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/devansu-yadav/" class="icon brands alt fa-linkedin"><span class="label">Linked In</span></a></li>
-					<li><a href="mailto:devansuyadav@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+</body>

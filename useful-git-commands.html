@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansu Yadav | Blogs</title>
+    <link rel="stylesheet" href="./src/css/useful-git-commands.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navigation container">
+        <ul class="nav-pills">
+            <li class="list-inline">
+                <a class="link" href="/index.html">Home</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/projects.html">Projects</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/blogs.html">Blogs</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/about.html">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Section containing option to change personal theme wil be below -->
+    <section class="section-theme">
+        <div class="personalize-theme">
+            <div class="toggle"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="src/js/darkMode.js"></script>
+
+    <section class="blog">
+        <div class="blog-heading">
+            <h1 class="blog-post-heading">Useful Git Commands that can help you in your Open Source Journey👨‍💻</h1>
+            <p class="blog-post-date">
+                Posted on
+                <time datetime="2020-10-06">06-10-2020</time>
+                <span> • 6 min read</span>
+            </p>
+        </div>
+
+        <img id="cover-img" src="assets/blog-1.png">
+
+        <div class="blog-content">
+            <p>
+                It’s almost that time of the year when Open Source enthusiasts, Developers, and Tech enthusiasts from different communities from all over the world participate in a month-long Open Source Fest. Yes I am talking about the Hacktoberfest 🤩
+            </p>
+            <img src="assets/blog-images/blog-1/img-1.jpg">
+            <p>
+                The <a href="https://hacktoberfest.digitalocean.com/"><b>Hacktoberfest</b></a> is an amazing platform for everyone, whether you are a Developer, an Open Source Enthusiast, or if you are a Beginner who wants to begin his Open Source journey👨‍💻.
+            </p>
+            <p>
+                Now if you are looking to contribute to Open Source😍 then you must have some working knowledge about <b>Git/Github</b>.
+            </p>
+            <p>
+                You might have heard about Git but if you haven’t it is a <b>Version Control System</b> that is used to manage/track your files in a Project that you are working on or if you are contributing to one.
+            </p>
+            <p style="margin: 2.5rem 0rem;">
+                <em>
+                    So using Git and Github we can easily manage files, track changes to different files, manage workflows in a Project, and much more. That’s why they are such an important tool when working on Open Source Projects.
+                </em>
+            </p>
+            <h2>
+                Setting up our Git Repository
+            </h2>
+            <p>
+                Let’s make a Git Repository and learn about some useful Git commands😀.
+            </p>
+            <p>
+                Let’s start by creating a folder where we can have different files like a text file, an Excel Database file, a Markdown File, a Folder consisting of Source Code files(An actual Project may have many different files).
+            </p>
+            <p style="margin: 1.5rem 0rem;">
+                But right now for simplicity's sake let’s keep these files empty.
+            </p>
+            <img src="assets/blog-images/blog-1/img-2.png">
+            <p>
+                We can use Git Bash to write Git commands or we can also use VS Code which has built-in support for Git. You can install Git <a href="https://git-scm.com/downloads"><b>here</b></a> or you can check out this <a href="https://code.visualstudio.com/docs/editor/versioncontrol#:~:text=You%20can%20create%20and%20checkout,tags%20in%20the%20current%20repository."><b>link</b></a> to know how to work with Git in Vs Code. If you are using Git for the first time do <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"><b>check this out</b></a> to know how to set up Git Bash.
+            </p>
+            <p style="margin: 2rem 0rem;">
+                Now let’s open Git Bash by Right-clicking and selecting “Git Bash here”.
+            </p>
+            <img src="assets/blog-images/blog-1/img-3.jpg">
+            <h3>1. Initializing our Git Repository</h3>
+            <img src="assets/blog-images/blog-1/img-4.png">
+            <p>
+                Here we are initializing our Git Repository or you can say we are making our directory a Git Repository.
+            </p>
+            <blockquote>
+                <p>
+                    <em>
+                        <b>NOTE</b>:-If you already have made a Git Repository then don’t use this command again else all the changes that you have made to this Repository will get re-initialized.
+                    </em>
+                </p>
+            </blockquote>
+            <h3 style="margin: 2rem 0rem; padding: 1rem 0rem;">2. Staging Files Initially</h3>
+            <img src="assets/blog-images/blog-1/img-5.jpg">
+            <p style="margin-bottom: 2rem;">We are staging these files initially so that now we can now track them using Git.</p>
+            <h3>3. Creating Initial Commit</h3>
+            <p>Let’s make our Initial Commit to our Repository.</p>
+            <img src="assets/blog-images/blog-1/img-6.jpg">
+            <p style="margin-bottom: 2rem;">
+                Now let’s take a look at some of the useful Git commands for merging branches, forking a Repository, Renaming, and Deleting files using the command line, and much more.
+            </p>
+            <h2>Git Commands</h2>
+            <h3>1. git diff</h3>
+            <p>
+                We had already staged our files initially <b>above</b> and made our initial commit.
+            </p>
+            <p>
+                Now suppose I modify a file say “Test.txt” and save it.
+            </p>
+            <img src="assets/blog-images/blog-1/img-7.png">
+            <p>
+                Let’s run the “<b>git status</b>” command.
+            </p>
+            <img src="assets/blog-images/blog-1/img-8.jpg">
+            <p>
+                As you can see it shows that we have modified that file. Now let’s run the “<b>git diff</b> ” command and see what happens.
+            </p>
+            <img src="assets/blog-images/blog-1/img-9.jpg">
+            <p>
+                Here using the “<b>git diff</b> ” command we are actually comparing this file “Test.txt”(modified file) which is in our <b>current working directory</b> with the same file which we had staged earlier(i.e in the <b>Staging Area</b>).
+            </p>
+            <p style="margin: 2rem 0rem;">
+                <em>
+                    So using this command we can come to know what modifications did we do in any file in our current Working Directory with the same file in Staging Area.
+                </em>
+            </p>
+            <img src="assets/blog-images/blog-1/img-10.png">
+            <blockquote>
+                <p>
+                    <em>
+                        Here as you can see the ‘+’ symbol denotes the changes that we made in that file(in our Working Directory) and ‘-’ denotes the content in the file in the Staging Area
+                    </em>
+                </p>
+            </blockquote>
+            <p style="margin: 2rem 0rem;">
+                <em>
+                    <b>Note</b>:- This command is not just limited to comparing two files, we can compare two branches as well.
+                </em>
+            </p>
+            <h3>2. git diff — staged</h3>
+            <p style="margin-bottom: 2rem;">
+                This command is used to know the difference between the files in the previous commit and the current Staging Area.
+            </p>
+            <p>
+                To understand this in detail let’s modify a few files.
+            </p>
+            <img src="assets/blog-images/blog-1/img-11.png">
+            <img src="assets/blog-images/blog-1/img-12.png">
+            <p>
+                Now let’s stage these files and run the “<b>git diff — staged</b> ” command.
+            </p>
+            <img src="assets/blog-images/blog-1/img-13.jpg">
+            <blockquote>
+                <p>
+                    <em>
+                        As you can see it shows us the difference between these files in the previous commit and the changed version of these files in the staging area(currently staged but committed).
+                    </em>
+                </p>
+            </blockquote>
+            <p style="margin: 1.5rem 0rem;">
+                This can be helpful to review the previous commit and make necessary changes to any file.
+            </p>
+            <h3>3. Renaming and Deleting any file using Git Bash</h3>
+            <blockquote>
+                <p>
+                    <em>
+                        Deleting/Renaming files can be a bit confusing and sometimes tedious especially if your Git Repository has a lot of files and folders because you would have to then stage all the files as well😥.
+                    </em>
+                </p>
+            </blockquote>
+            <p style="margin: 1.5rem 0rem;">
+                A cleaner and efficient way 😊to do this would be to use the following Git commands:-
+            </p>
+            <h3>Renaming a File</h3>
+            <pre><span><strong>git mv &#60;filename&#62; &#60;newfilename&#62;</strong><br># &#60;filename&#62; is name of your file you want to rename.<br># &#60;newfilename&#62; is name you want to give to your file.</span></pre>
+            <h3>Deleting a file</h3>
+            <pre><span><strong>git rm &#60;filename&#62;</strong></span></pre>
+            <p style="margin: 3rem 0rem;">
+                Using these commands we can easily <b>Rename/Delete</b> any file in our Repository and the changes would also be <b>staged automatically by Git</b> so you wouldn’t have to worry about staging these changes😍.
+            </p>
+            <h3 style="margin: 2rem 0rem;">4. Syncing Forks in Git and Github</h3>
+            <blockquote>
+                <p>
+                    <em>
+                        The World of Open Source Development is really active because so many developers contribute to different Open Source Projects.
+                    </em>
+                </p>
+            </blockquote>
+            <p style="margin: 2rem 0rem;">
+                So if you are contributing to an Open Source Project then Syncing your forked Repository with the Original Repository becomes really important.
+            </p>
+            <img src="assets/blog-images/blog-1/img-14.png" alt="Git Workflow for syncing Forks">
+            <p>
+                Suppose you already have a <b>Forked Repository</b>(on <b>Github</b>) which you want to sync with the <b>Original Repository</b>(from which you forked).
+            </p>
+            <p style="margin: 2rem 0rem;">
+                If you haven’t cloned the Forked Repo on your Local machine then just use the following command:-
+            </p>
+
+            <pre><span><strong>git clone https://github.com/&#60;Username&#62;/&#60;Repository-name&#62;.git &#60;filename&#62;</strong><br># filename: It is the name of file/folder for the Cloned Repository on your Local Machine.</span></pre>
+            
+            <p style="margin: 1.5rem 0rem;">
+                Now we will add the Original repository as a <b>remote repository(upstream)</b>:-
+            </p>
+
+            <pre><span><strong>git remote add upstream https://github.com/&#60;Owner&#62;/&#60;Repository&#62;.git</strong><br># add the original repository as remote repository called "upstream"</span></pre>
+            
+            <p>
+                Now we will fetch the changes from the <b>upstream repository</b>:-
+            </p>
+            <pre><span><strong>git fetch upstream</strong><br># Fetch the branches and their respective commits from the upstream repository.</span></pre>
+            
+            <p style="margin: 2rem 0rem;">
+                We will now switch to the <b>master</b> branch of the <b>fork’s local repo</b> and merge the changes in the <b>upstream repo</b> to the <b>local repo’s master branch</b>:-
+            </p>
+            
+            <pre><span><strong>git checkout master</strong><br># switch to the master branch of your fork's local repo<br><br><strong>git merge upstream/master</strong><br># Merge the changes from <b>upstream/master</b> into your local <b>master</b> branch.</span></pre>
+            
+            <p style="margin: 2rem 0rem;">
+                This brings your <b>fork’s local repo</b> in sync with the <b>Original repository</b>😄.
+            </p>
+
+            <p>
+                <em>
+                    However, if you also want to update the forked repo on Github then you would have to push the master branch (or the branch in which you merged the changes of the upstream repo).
+                </em>
+            </p>
+
+            <pre><span><strong>git push origin master</strong><br># origin: forked repository on Github</span></pre>
+            
+            <p style="margin: 2rem 0rem;">
+                And boom!! Your Forked Repo on Github is also now synced with the Original Repo😄.
+            </p>
+            <p>
+                That’s it from me guys, hope I was able to make it simple for everyone😃
+            </p>
+
+            <p>
+                Do share the post if you like it👍
+            </p>
+
+            <p>
+                Happy Coding!!😊 Thank you for reading my blog!
+            </p>
+
+            <p style="margin: 3rem 0rem;">
+                Feel free to reach me out!<br>
+                <a href="https://www.linkedin.com/in/devansu-yadav/"><b>Linkedin</b></a><br>
+                <a href="https://twitter.com/DevanshYtweets"><b>Twitter</b></a>
+            </p>
+            <br>
+            <a href="/blogs.html"><b>← All Posts</b></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container-center">
+            <ul class="other-page-social-media">
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="mailto:devansuyadav@gmail.com">
+                        <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://github.com/Devansu-Yadav">
+                        <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                        <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://twitter.com/DevanshYtweets">
+                        <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://devansuyadav.medium.com/">
+                        <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <p id="other-page-footer-para">Made with ❤️ by <a class="footer-link" href="https://github.com/Devansu-Yadav">Devansu Yadav</a></p>
+        </div>
+    </footer>
+</body>

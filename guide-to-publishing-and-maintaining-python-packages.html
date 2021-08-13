@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansu Yadav | Blogs</title>
+    <link rel="stylesheet" href="./src/css/guide-to-publishing-and-maintaining-python-packages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navigation container">
+        <ul class="nav-pills">
+            <li class="list-inline">
+                <a class="link link-active" href="/index.html">Home</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/projects.html">Projects</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/blogs.html">Blogs</a>
+            </li>
+            <li class="list-inline">
+                <a class="link" href="/about.html">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Section containing option to change personal theme wil be below -->
+    <section class="section-theme">
+        <div class="personalize-theme">
+            <div class="toggle"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="src/js/darkMode.js"></script>
+
+    <section class="blog">
+        <div class="blog-heading">
+            <h1 class="blog-post-heading">A Simple Guide to Publishing and maintaining a Python Package on PyPI</h1>
+            <p class="blog-post-date">
+                Posted on
+                <time datetime="2021-04-21">21-04-2021</time>
+                <span> • 7 min read</span>
+            </p>
+        </div>
+
+        <img id="cover-img" src="assets/blog-3.png">
+
+        <div class="blog-content">
+            <p>
+                Python has a lot of built-in libraries which we use so frequently.
+            </p>
+
+            <blockquote>
+                <p>
+                    <em>
+                        According to me, the best thing about Python is that it is built as an Open Source Software and many of the Python libraries/packages are also Open source, which means anyone can view the source code and contribute to these libraries.
+                    </em>
+                </p>
+            </blockquote>
+
+            <h2 style="margin: 1rem 0rem;">What if you wanted to contribute your Python Package so that everyone can use it?</h2>
+            <p style="margin-bottom: 3rem;">
+                Well, it’s simple and that’s what I am going to share with you in this Blog.
+            </p>
+
+            <p>
+                First of all,
+            </p>
+
+            <h2>What is PyPI?</h2>
+            <img src="assets/blog-images/blog-2/img-1.png">
+            <p>
+                The <b>Python Package Index</b> (<b>PyPI</b>) is a repository of software for the Python programming language. <b>PyPI</b> helps you find and install software developed and shared by the Python community.
+            </p>
+            <p style="margin: 2rem 0rem;">
+                You might be familiar with the ‘<b>pip</b>’ command in Python. It is basically used to install different libraries created by the community from PyPI, which you can use in your Python apps.
+            </p>
+
+            <p>
+                For Eg:-
+            </p>
+            <pre><span><strong>pip install tensorflow</strong></span></pre>
+
+            <h2>What is a Package in Python?</h2>
+            <p style="margin-bottom: 3rem;">
+                A Package in Python is nothing but a <b>Library</b> consisting of <em>different modules (files) and other sub-packages</em>.
+            </p>
+
+            <p>
+                Now let’s look at the steps for publishing your Python Package on PyPI -
+            </p>
+
+            <h2>STEP 1: Creating all the files for your Package</h2>
+
+            <p>
+                In this blog, I am going to take my Package ‘<b>turtle_conics</b>’ as an example.
+            </p>
+
+            <img src="assets/blog-images/blog-2/img-2.png" alt="Files for my Python Package">
+            <p>
+                First, we will have to create a folder (You can create one anywhere but here I have created it on Desktop for my convenience) (<b>for Windows/Mac/Linux distros</b>) with <b>the same name as you want for your Package</b>. So for me, it’s ‘<b>turtle_conics</b>’. 
+                Next, create a folder inside this folder with the exact same name that you gave to the Folder created just now.
+            </p>
+            <p style="margin: 2rem 0rem;">
+                List of Files required to be created:
+            </p>
+
+            <p>
+                <em>
+                    1) __init__.py file<br>
+                    2) Source Code Files<br>
+                    3) setup.py file<br>
+                    4) License.txt file<br>
+                    5) README.md
+                </em>
+            </p>
+
+            <p>
+                Project structure for my Package
+            </p>
+
+            <pre><span>turtle_conics/<br>|<br>├── turtle_conics/<br>│   ├── __init__.py<br>│   ├── all_curves.py<br>|<br>├── LICENSE.txt<br>├── README.md<br>└── setup.py</span></pre> 
+            <h3>1) __init__.py file:</h3>
+            <p>
+                The <em>__init__.py</em> file is required to make Python treat directories with this file as a Package.
+            </p>
+            <p>
+                So now inside the folder that we just created inside my Desktop folder(for you it can be in a different location), we need to put the <em>__init__.py</em> file. You can keep this file empty as I did.
+            </p>
+            <img src="assets/blog-images/blog-2/img-3.png">
+            <h3>2) Source Code files:</h3>
+            <p>
+                Now inside the same folder where we placed our <em>__init__.py</em> file, we can place all the source code files (Python Files).
+            </p>
+            <img src="assets/blog-images/blog-2/img-4.png">
+            <h3>3) setup.py file:</h3>
+            <p>
+                The <em>setup.py</em> file contains information about your package that <b>PyPI</b> needs, like its <b>name</b>, a <b>description</b>, the <b>current version</b>, etc. We will look directly into a real simple setup.py here:
+            </p>
+
+            <pre><code><span>import setuptools<br><br>with open("README.md", "r") as fh:<br>    long_description = fh.read()<br><br>setuptools.setup(<br>    name="Your Package name", # Replace with your package name<br>    version="version_no",<br>    author="Your name",<br>    author_email="Your email id",<br>    description="Description of your Python package",<br>    long_description=long_description,<br>    long_description_content_type="text/markdown",<br>    url="Link to your Github repo for your Package",<br>    packages=setuptools.find_packages(),<br>    classifiers=[<br>        "Programming Language :: Python :: 3",<br>        "License :: OSI Approved :: MIT License",<br>        "Operating System :: OS Independent",<br>    ],<br>    python_requires='>=3.6',<br>)</span></code></pre>
+
+            <p>
+                Most of the options are self-explainable, you can just copy the content of setup.py above and modify it as you need.
+            </p>
+
+            <blockquote>
+                <p>
+                    <em>
+                        Please remember to list all <b>dependencies of your package</b> in a list and place it below ‘classifiers’ [just like there is the requirement for Python version there] or click <a href="https://python-packaging.readthedocs.io/en/latest/dependencies.html#packages-not-on-pypi"><b>here</b></a>, so that these requirements can be installed automatically while your package is being installed.
+                    </em>
+                </p>
+            </blockquote>
+            <h3>
+                4) License File
+            </h3>
+
+            <p>
+                A License File is highly recommended for any <b>Open source project</b> so you can choose any <b>License</b> according to you and save the file as <b>License.txt</b>.
+            </p>
+            <p>
+                For licenses check <a href="https://choosealicense.com/"><b>here</b></a>.
+            </p>
+            <h3>5) README.md File</h3>
+            <p>
+                Almost every Open-source Project has a <b>README.md</b> file explaining the <em>Package/Project</em>. Hence this file is highly recommended if you want other people to understand your Project. It can be used to describe all the <b>features/functionalities</b> or implementation of your Project.
+            </p>
+            <p>
+                This is how the README for my package looks like on <b>PyPI</b> -
+            </p>
+
+            <img src="assets/blog-images/blog-2/img-5.png">
+            <p>
+                <b>NOTE</b>:- Save the file as README.md and not as .txt
+            </p>
+            <p style="margin: 2rem 0rem;">
+                For creating this file you can use text editors like <a href="https://code.visualstudio.com/docs/languages/markdown#_markdown-preview"><b>Visual Studio Code</b></a> or you can use other Online text editors.
+            </p>
+
+            <p>
+                Now after you are ready with the <b>License.txt file, README.md,</b> and <b>setup.py</b> file, place all the three files inside the Desktop folder(for you it may be some other folder).
+            </p>
+
+            <img src="assets/blog-images/blog-2/img-6.png">
+
+            <h2>Step 2. Create a PyPi account</h2>
+            <p>
+                If you already have a <b>PyPi</b> account (and still remember your username/password, of course), you can skip this step. Otherwise, please go to the <a href="https://pypi.org/"><b>PyPi homepage</b></a> and register a new account instantly (for free, of course).
+            </p>
+            <img src="assets/blog-images/blog-2/img-7.png">
+            <h2>STEP 3: Time to upload your Package on PyPI</h2>
+            <p>
+                <b>Generating Distribution archives(wheel file)</b>: These are archives to be uploaded on PyPI for uploading the Package.
+            </p>
+
+            <p>
+                Make sure you have the latest versions of <em>setuptools</em> and wheel installed:
+            </p>
+
+            <pre><span><strong>python3 -m pip install — user — upgrade setuptools wheel</strong></span></pre>
+
+            <p style="margin: 1.5rem 0rem;">
+                Now for <b>Windows OS</b> open the <b>Folder</b> for your Package and click on the <b>Top address bar</b> and type <b>cmd</b>. This will open the Windows Command Prompt at that Folder path.
+            </p>
+
+            <p>
+                If you are on <b>Mac/Linux</b> just open the <b>Desktop folder</b> for the Package and <b>Right-click</b> and Select -> <b>New Terminal at Folder</b> or just open your <b>Terminal</b> on <b>Mac/Linux</b> and using <em>cd</em> provide the path to this folder.
+            </p>
+
+            <p style="margin: 1.5rem 0rem;">
+                Now, if you are on <b>Windows</b>, type the following command on <em>cmd</em>:-
+            </p>
+
+            <pre><span><strong>python setup.py sdist bdist_wheel</strong></span></pre>
+
+            <p style="margin: 1.5rem 0rem;">
+                Else if you are on <b>Mac/Linux</b>, type the following command:-
+            </p>
+
+            <pre><span><strong>python3 setup.py sdist bdist_wheel</strong></span></pre>
+
+            <img src="assets/blog-images/blog-2/img-8.png" alt="Generating distribution archives for my Package (on Windows)">
+
+            <p>
+                This command should output a lot of text and once completed should generate two files in the <em>dist</em> directory, among others in build and <em>*.egg-info</em> folder:
+            </p>
+
+            <figure>
+                <img src="assets/blog-images/blog-2/img-9.png" alt="The “dist” Folder">
+                <figcaption>The “dist” Folder</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="assets/blog-images/blog-2/img-10.png" alt="The “build” folder">
+                <figcaption>The “build” folder</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="assets/blog-images/blog-2/img-11.png" alt="The “*.egg-info” folder">
+                <figcaption>The “*.egg-info” folder</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="assets/blog-images/blog-2/img-12.png" alt="Check Package availability for different Python versions">
+                <figcaption>Check Package availability for different Python versions</figcaption>
+            </figure>
+
+            <blockquote>
+                <p>
+                    <em>
+                        Note:- Make sure that the correct version of python “<b>py3</b>” is mentioned in this line in the output when you run <b>python setup.py sdist bdist_wheel</b> (for Windows) or <b>python3 setup.py sdist bdist_wheel</b> (for Mac/Linux distros). If it's “<b>py2</b>” then the module will install only in <b>python2.x</b> and not in <b>python3.x</b>.
+                    </em>
+                </p>
+            </blockquote>
+            <br>
+
+            <h3>Uploading Distribution archives:</h3>
+
+            <p>
+                Now it’s time to upload the distribution archives that we generated in the previous step.
+            </p>
+
+            <p>
+                For this open <b>cmd</b>(<b>For Windows</b>) and <b>Terminal</b>(<b>for Mac/Linux</b>) at the same Folder path as we did in the <b>previous step</b> and type the following command:-
+            </p>
+
+            <pre><span><strong>twine upload dist/*</strong></span></pre>
+            <br>
+            <blockquote>
+                <p>
+                    <em>
+                        <b>NOTE</b>:-Make sure to install <b>twine</b> using <b>pip install twine</b> , as we will be uploading our package distribution archives using this tool.
+                    </em>
+                </p>
+            </blockquote>
+            
+            <p style="margin: 2rem 0rem;">
+                Then enter the <b>username</b> and then <b>password</b>, the password will not show as you type. so just type it and hit enter,
+            </p>
+
+            <img src="assets/blog-images/blog-2/img-13.jpg">
+
+            <p>
+                Great!👏 Now we have uploaded the Package on PyPI so now go to the website and under your projects check your Package.
+            </p>
+
+            <br>
+
+            <h2>Installing your package:</h2>
+            <p>
+                Now that we have uploaded our package on PyPI, let’s try to install it using <em>pip</em> just like we do for installing other <b>modules/packages</b>.
+            </p>
+
+            <pre><span><strong>pip install &#60;your package name&#62;</strong></span></pre>
+
+            <p>
+                **Replace <em>&#60;your package name&#62;</em> with the name of the Python package that you just uploaded.
+            </p>
+
+            <figure>
+                <img src="assets/blog-images/blog-2/img-14.png">
+                <figcaption>Installing the Package:)</figcaption>
+            </figure>
+
+            <br>
+
+            <h2>Updating your Package</h2>
+
+            <p>
+                If you want to release a <b>new version</b> for your package where you may have made some changes to your code, then first change the <b>version</b> for your package in the <em>setup.py</em> file. Now your <em>setup.py</em> file should look like this:-
+            </p>
+
+            <pre><code><span>import setuptools<br><br>with open("README.md", "r") as fh:<br>    long_description = fh.read()<br><br>setuptools.setup(<br>    name="Your Package name", # Replace with your package name<br>    version="version_no", <b>    &#60;- #Enter latest version no</b><br>    author="Your name",<br>    author_email="Your email id",<br>    description="Description of your Python package",<br>    long_description=long_description,<br>    long_description_content_type="text/markdown",<br>    url="Link to your Github repo for your Package",<br>    packages=setuptools.find_packages(),<br>    classifiers=[<br>        "Programming Language :: Python :: 3",<br>        "License :: OSI Approved :: MIT License",<br>        "Operating System :: OS Independent",<br>    ],<br>    python_requires='>=3.6',<br>)</span></code></pre>
+
+            <br>
+            <p>
+                Now recreate the <b>wheel file</b> by:
+            </p>
+
+            <h3>For Windows:-</h3>
+
+            <pre><span><strong>python setup.py sdist bdist_wheel</strong></span></pre>
+            
+            <br>
+
+            <h3>For Mac/Linux:-</h3>
+            <pre><span><strong>python3 setup.py sdist bdist_wheel</strong></span></pre>
+            <br>
+            <p>
+                And then type the following command:
+            </p>
+            <pre><span><strong>twine upload --skip-existing dist/*</strong></span></pre>
+
+            <br>
+            <figure>
+                <img src="assets/blog-images/blog-2/img-15.jpg">
+                <figcaption>Uploading latest Package distribution archive by skipping older versions</figcaption>
+            </figure>
+            <br>
+
+            <p>
+                And that’s it!! I hope this was helpful😊
+            </p>
+
+            <p>
+                You can check out my Python Package <a href="https://pypi.org/project/turtle-conics/"><b>here</b></a>.
+            </p>
+            <p>
+                Also, I would love to hear about your suggestions on my blog posts or any improvements that I can make.
+            </p>
+            <blockquote>
+                <p>
+                    Feel free to reach out to me:<br>
+                    <a href="https://twitter.com/DevanshYtweets"><b>Twitter</b></a><br>
+                    <a href="https://www.linkedin.com/in/devansu-yadav/"><b>Linkedin</b></a><br>
+                    <a href="https://github.com/Devansu-Yadav"><b>Github</b></a><br>
+                    <a href="https://studentambassadors.microsoft.com/en-US/profile/101972"><b>Student Ambassador Profile</b></a>
+                    Or if you feel more comfy to mail, I am glad you can write here too<br>
+                    <a href="mailto:devansuyadav@gmail.com"><b>devansuyadav@gmail.com</b></a>
+                </p>
+            </blockquote>
+
+            <br>
+            <p>
+                Happy Coding :) Thank you for reading my blog!!
+            </p>
+            <br>
+            <a href="/blogs.html"><b>← All Posts</b></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container-center">
+            <ul class="other-page-social-media">
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="mailto:devansuyadav@gmail.com">
+                        <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://github.com/Devansu-Yadav">
+                        <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                    </a>
+                </li>
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://www.linkedin.com/in/devansu-yadav/">
+                        <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://twitter.com/DevanshYtweets">
+                        <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="other-page-social-list-inline">
+                    <a class="icon social-link" href="https://devansuyadav.medium.com/">
+                        <ion-icon name="logo-medium" role="img" class="md hydrated" aria-label="logo medium"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <p id="other-page-footer-para">Made with ❤️ by <a class="footer-link" href="https://github.com/Devansu-Yadav">Devansu Yadav</a></p>
+        </div>
+    </footer>
+</body>

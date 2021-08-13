@@ -1,0 +1,1147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/* :root {
+    --primary-color: #3B82F6;
+    --off-white: #F3F4F6;
+    --dark-mode: #292C35;
+    --ball-color: #fff;
+    --toggle-button-color: #111;
+    --blog-post-date-color: #999;
+} */
+
+* {
+    scroll-behavior: smooth!important;
+}
+
+/** Body **/
+body {
+    font-family: 'Poppins', sans-serif;
+    --text-color: #222;
+    --bkg-color: #fff;
+    --primary-color: #3B82F6;
+    --off-white: #F3F4F6;
+    --heading-text-color: black;
+    /* Personalize theme vars */
+    --toggle-button-bg-color: #e9f5ff;
+    --toggle-button-dark-bg-color: #404852;
+    --brightness-icon-color: #fff;
+    /* Navbar vars */
+    --nav-bg-color: var(--primary-color);
+    --nav-hover-color: var(--primary-color);
+    --nav-border-color: none;
+
+    /* Blog variables */
+    --blog-post-date-color: #999;
+    --blog-post-link: #111;
+}
+
+body.dark-mode {
+    --text-color: #eee;
+    --bkg-color: #121212;   /*#121212  #15202b*/
+    --heading-text-color: var(--text-color);
+    --secondary-color: var(--nav-bg-color);
+    --border-color: #6B7280;
+
+    /* Navbar vars */
+    --nav-bg-color: #111827;  /*#111827 #2C3750*/
+    --nav-hover-color: var(--bkg-color);
+    --nav-border-color: var(--border-color);
+    
+    /* Social media icons vars */
+    --social-icon-hover-color: var(--primary-color);
+
+    /* Blog variables */
+    --blog-post-date-color: #D1D5DB;
+    --blog-post-link: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --text-color: #eee;
+        --bkg-color: #121212;   /*#121212  #15202b*/
+        --heading-text-color: var(--text-color);
+        --secondary-color: var(--nav-bg-color);
+        --border-color: #6B7280;
+        
+        /* Navbar vars */
+        --nav-bg-color: #111827;  /*#111827 #2C3750*/
+        --nav-hover-color: var(--bkg-color);
+        --nav-border-color: var(--border-color);
+
+        /* Social media icons vars */
+        --social-icon-hover-color: var(--nav-border-color);
+
+        /* Blog variables */
+        --blog-post-date-color: #D1D5DB;
+        --blog-post-link: var(--text-color);
+    }
+
+    body.light-mode {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --primary-color: #3B82F6;
+        --off-white: #F3F4F6;
+        --heading-text-color: black;
+        /* Personalize theme vars */
+        --toggle-button-bg-color: #e9f5ff;
+        --toggle-button-dark-bg-color: #404852;
+        --brightness-icon-color: #fff;
+        /* Navbar vars */
+        --nav-bg-color: var(--primary-color);
+        --nav-hover-color: var(--primary-color);
+        --nav-border-color: none;
+
+        /* Blog variables */
+        --blog-post-date-color: #999;
+        --blog-post-link: #111;
+    }
+}
+
+body {
+    background-color: var(--bkg-color);
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+/** Containers **/
+
+.container {
+    padding: 0rem 1rem;
+}
+
+.container-center {
+    max-width: 700px;
+    margin: auto;
+}
+
+/** Links **/
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.primary-link {
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+body.dark-mode .primary-link {
+    color: var(--bkg-color);
+    background-color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.secondary-link {
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/** Lists **/
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+/** Navbar **/
+.navigation {
+    background-color: var(--nav-bg-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--nav-border-color);
+    transition: background-color 0.5s;
+}
+
+.navigation .nav-pills {
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+.navigation .link {
+    color: white;
+}
+
+.navigation .link:hover {
+    color: var(--nav-hover-color);
+    background-color: var(--brightness-icon-color);
+    border-radius: 1.5rem;
+}
+
+.nav-pills .list-inline {
+    padding: 0rem 1rem;
+}
+
+.navigation .link-active {
+    font-weight: bold;
+}
+
+/** Responsive CSS for Navbar**/
+@media only screen and (max-width: 700px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 0.7rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+/** Header **/
+.hero-container {
+    padding: 0rem 4rem;
+    margin: 1rem 1rem;
+    /* position: relative;
+    top: 7rem; */
+}
+
+.hero {
+   display: flex;
+}
+
+.hero div{
+    margin-right: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero #hero-image {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: 0rem;
+    padding: 1rem 0rem;
+}
+
+#hero-image img{
+    height: 297px;
+    width: 287px;
+    border-radius: 50%;
+    border: 0.5px solid gray;
+}
+
+body.dark-mode #hero-image img {
+    filter: contrast(1.2);
+}
+
+.hero #header-name {
+    font-size: 4.5rem;
+    font-weight: 400;
+    /* height: 5rem; */
+    color: var(--heading-text-color);
+    height: auto;
+    margin-bottom: 0.5rem;
+    transition: color 0.5s;
+    /* word-wrap: normal; */
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.hero #header-tagline {
+    /* line-height: 0.2rem; */
+    color: var(--heading-text-color);
+    font-size: 1.25rem;
+    word-wrap: break-word;
+    /* padding-left: 0.5rem; */
+    text-align: center;
+    transition: color 0.5s;
+}
+
+/** Responsive CSS for Header**/
+@media only screen and (max-width: 1200px) {
+    .hero-container {
+        padding-right: 2rem;
+        padding-left: 6rem;
+    }
+    #hero-image img {
+        height: 250px;
+        width: 235px;
+    }
+    .hero #header-name {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1032px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero #hero-image {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+
+    #hero-image img {
+        height: 600px;
+        width: 567px;
+    }
+
+    .hero #header-name {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 728px) {
+    .hero-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #hero-image img {
+        height: 250px;
+        width: 237px;
+        margin-top: 2rem;
+    }
+
+    .hero #header-tagline {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media only screen and (max-width: 566px) {
+    .hero #header-name {
+        text-align: left;
+    }
+    .hero #header-tagline {
+        font-size: 1rem;
+        text-align: left;
+        width: fit-content;
+    }
+
+    .hero div {
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    .hero #header-name {
+        font-size: 3rem;
+    }
+
+    .hero div {
+        padding-left: 2rem;
+    }
+
+    #hero-image img {
+        height: 200px;
+        width: 195px;
+    }
+}
+
+/** Section **/
+.section {
+    padding: 2rem;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.off-white {
+    background-color: var(--off-white);
+}
+
+#section-heading {
+    font-size: 2rem;
+}
+
+body.dark-mode #section-heading{
+    color: var(--heading-text-color);
+    transition: color 0.5s;
+}
+
+/** Intro Section **/
+.intro-section {
+    padding: 2rem 4rem 0rem 4rem;
+    margin: 3rem 0rem;
+}
+
+body.dark-mode .intro-section {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+.intro-section h1 {
+    text-align: left;
+}
+
+.intro-container {
+    display: flex;
+}
+
+.intro-container .intro-content {
+    max-width: 600px;
+    margin-right: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.intro-container .learn-more {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    /* text-align: center; */
+}
+
+.intro-content #my-intro {
+    font-size: 1.1rem;
+    word-wrap: break-word;
+}
+
+.learn-more a {
+    display: block;
+}
+
+.learn-more .link-1 {
+    margin-bottom: 2rem;
+    width: fit-content;
+}
+
+.learn-more .link-2 {
+    width: fit-content;
+    margin: 0rem auto;
+}
+
+.learn-more a:hover {
+    color: var(--primary-color);
+    background-color: var(--bkg-color);
+    border: 1px solid var(--primary-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+body.dark-mode .learn-more a:hover {
+    background-color: var(--text-color);
+    transition: background-color 0.5s;
+}
+
+.intro-content .intro-social-media {
+    padding: 1.5rem 0rem;
+}
+
+.intro-content .intro-social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.intro-content .intro-social-list-inline .intro-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+}
+
+body.dark-mode .intro-content .intro-social-list-inline .intro-icon {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.intro-content .intro-social-list-inline .intro-social-link {
+    text-decoration: none;
+}
+
+.intro-content .intro-social-list-inline .intro-social-link:hover {
+    color: black;
+    transition: color 0.8s;
+}
+
+body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover {
+    color: var(--social-icon-hover-color);
+    transition: color 0.8s;
+}
+
+.intro-content .intro-social-list-inline .intro-icon ion-icon {
+    font-size: 1.6rem;
+}
+
+/* Responsive CSS for Intro section */
+@media only screen and (max-width: 1048px) {
+    .learn-more .primary-link {
+        font-size: 1rem;
+    } 
+
+    .intro-container .intro-content {
+        max-width: 500px;
+    }
+
+    .intro-content #my-intro {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 914px) {
+    .intro-section {
+        padding: 2rem 2rem 0rem 2rem;
+    }
+
+    .intro-container .intro-content {
+        max-width: 400px;
+    }
+
+    .intro-content #my-intro {
+        font-size: 0.8rem;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon {
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon ion-icon {
+        font-size: 1.4rem;
+    }
+
+    .intro-content #section-heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .learn-more .primary-link {
+        font-size: 0.6rem;
+    }
+
+    .learn-more .link-1 {
+        margin-bottom: 1rem;
+    }
+
+    .intro-container .intro-content {
+        max-width: 300px;
+    }
+
+    .intro-content #my-intro {
+        font-size: 0.8rem;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon ion-icon {
+        font-size: 1.2rem;
+    }
+
+    .intro-content #section-heading {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .intro-section {
+        padding: 2rem;
+    }
+    
+    .intro-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-content #section-heading {
+        text-align: center;
+    }
+
+    .intro-container .learn-more {
+        margin: 0.5rem 1rem;
+    }
+
+    .intro-container .intro-content {
+        margin: 0rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .intro-container .intro-content {
+        max-width: 250px;
+    }
+    
+    .intro-section {
+        padding: 1rem;
+    }
+
+    .intro-content #my-intro {
+        text-align: justify;
+    }
+    
+    .intro-content #section-heading {
+        font-size: 1.2rem;
+    }
+
+    .intro-container .learn-more {
+        margin: 0.5rem 1rem;
+    }
+
+    .intro-container .intro-content {
+        margin: 0rem 1.5rem;
+    }
+
+    .intro-content .intro-social-list-inline {
+        padding: 0;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
+    .intro-content .intro-social-list-inline .intro-icon ion-icon {
+        font-size: 1rem;
+    }
+}
+
+/** Section for Personalized theme **/
+.section-theme {
+    padding: 0.5rem 1rem;
+}
+.section-theme .personalize-theme {
+    margin-left: auto;
+    width: fit-content;
+    padding: 0.5rem;
+    margin-right: 2rem;
+}
+
+.personalize-theme .toggle {
+    width: 3rem;
+    height: 3rem;
+    background: var(--toggle-button-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.toggle::before {
+    content: "\f186";
+    font-size: 1.2rem;
+	font-family: "Font Awesome 5 Free";
+	color: var(--primary-color);
+	position: center;
+}
+
+body.dark-mode .toggle {
+    background: var(--toggle-button-dark-bg-color);
+    transition: background 0.5s;
+}
+
+body.dark-mode .toggle::before {
+    content: "\f185";
+	color: var(--brightness-icon-color);
+    transition: color 0.5s;
+}
+
+
+/** Responsive CSS for Personalize theme **/
+@media only screen and (max-width: 430px) {
+    .personalize-theme .toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/** Blog section Homepage **/
+.blog-section-home {
+    padding: 1rem 2rem;
+}
+
+.blog-section-home .container-center {
+    max-width: 600px;
+    margin: auto;
+}
+
+.blog-section-home .list-non-bullet {
+    padding-left: 0;
+}
+
+#blog-section-heading-home {
+    font-size: 3rem;
+    text-align: center;
+}
+
+body.dark-mode #blog-section-heading-home {
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+.blog-section-home .blog-post {
+    padding: 1.5rem;
+}
+
+.blog-section-home li {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-post .blog-post-date {
+    color: var(--blog-post-date-color);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    font-style: italic;
+    text-align: left;
+    padding-left: 2.5rem;
+    transition: color 0.5s;
+}
+
+body.dark-mode .blog-post img {
+    border: 1px solid var(--border-color);
+    transition: border 0.5s;
+}
+
+.blog-post .post-link {
+    color: var(--blog-post-link);
+    transition: color 0.5s;
+}
+
+.blog-post .post-link:hover {
+    color: var(--primary-color);
+    transition: color 0.6s;
+}
+
+.blog-post .link {
+    text-decoration: none;
+    padding: 0;
+}
+
+.blog-post .blog-post-heading {
+    text-align: left;
+    padding-left: 2.5rem;
+}
+
+.blog-section-home .view-more-blogs {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.view-more-blogs .more-blogs-link {
+    font-size: 1.5rem;
+}
+
+.blog-section-home .more-blogs-link:hover {
+    color: var(--primary-color);
+    background-color: var(--bkg-color);
+    border: 1px solid var(--primary-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+body.dark-mode .blog-section-home .more-blogs-link:hover {
+    background-color: var(--text-color);
+    transition: background-color 0.5s;
+}
+
+/** Responsive CSS for Blogs section**/
+@media only screen and (max-width: 850px) {
+    .section .list-non-bullet {
+        padding: 0rem 1rem;
+    }
+
+    .blog-post .blog-img {
+        width: 500px;
+        height: 250px;
+    }
+
+    .blog-post .blog-post-heading {
+        font-size: 1.4rem;
+    }
+}
+ 
+@media only screen and (max-width: 635px) {
+    .blog-section-home .container-center {
+        max-width: 450px;
+    }
+
+    .blog-post .blog-img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .blog-post .blog-post-heading {
+        font-size: 1.2rem;
+    }
+
+    .blog-section-home #blog-section-heading-home {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .blog-section-home .blog-post {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .view-more-blogs .more-blogs-link {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .blog-section-home .container-center {
+        max-width: 300px;
+    }
+
+    .blog-section-home #blog-section-heading-home {
+        font-size: 1.5rem;
+    }
+
+    .blog-post .blog-img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .blog-post .blog-post-heading {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+
+    .blog-post .blog-post-date {
+        font-size: 0.6rem;
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .view-more-blogs .more-blogs-link {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .blog-section-home {
+        padding: 1rem;
+    }
+
+    .blog-section-home li {
+        margin-bottom: 1rem;
+    }
+
+    .blog-section-home .container-center {
+        max-width: 250px;
+    }
+    
+    .blog-section-home #blog-section-heading-home {
+        font-size: 1.3rem;
+    }
+    
+    .blog-post .blog-img {
+        width: 250px;
+        height: 125px;
+    }
+
+    .blog-post .blog-post-heading {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .blog-post .blog-post-date {
+        padding-left: 0.5rem;
+    }
+
+    .view-more-blogs .more-blogs-link {
+        font-size: 0.8rem;
+    }
+}
+
+/** Contact section on Home page **/
+.contact-section {
+    padding: 1.5rem 3rem;
+}
+
+body.dark-mode .contact-section {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.contact-section .flexed-contact-div {
+    display: flex;
+}
+
+.contact-section #contact-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+body.dark-mode .contact-section #contact-heading {
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+.contact-section #contact {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+body.dark-mode .contact-section #contact {
+    color: var(--text-color);
+    transition: color 0.5s;
+}
+
+.contact-section .contact {
+    margin: 2rem 3rem 2rem 2rem;
+    padding: 0rem 1rem;
+}
+
+.flexed-contact-div #contact-img {
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+.contact div {
+    padding: 1rem 0rem;
+}
+
+.contact #contact-heading {
+    margin: 1.5rem 0rem;
+}
+
+.contact .social-media {
+    padding: 1.5rem 0rem;
+}
+
+.contact .social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.contact .social-list-inline .icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+}
+
+body.dark-mode .contact .social-list-inline .icon {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.contact .social-list-inline .social-link {
+    text-decoration: none;
+}
+
+.contact .social-list-inline .social-link:hover {
+    color: black;
+    transition: color 0.8s;
+}
+
+body.dark-mode .contact .social-list-inline .social-link:hover {
+    color: var(--primary-color);
+    transition: color 0.5s;
+}
+
+.contact .social-list-inline .icon ion-icon {
+    font-size: 1.6rem;
+}
+
+/* * Responsive CSS for Contact Section * */
+@media only screen and (max-width: 1115px) {
+    .contact-section .contact {
+        margin: 2rem 1rem 2rem 2rem;
+    }
+
+    .flexed-contact-div #contact-img {
+        width: 400px;
+    }
+
+    .contact #contact-heading {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .contact-section #contact {
+        font-size: 1.6rem;
+    }    
+
+    .contact .social-list-inline .icon {
+        height: 2.8rem;
+        width: 2.5rem;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 1.5rem;
+    }
+
+    .contact .social-list-inline {
+        padding: 0rem 0.2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contact-section {
+        padding: 1.5rem 2rem;
+    }
+
+    .contact-section .contact {
+        margin: 2rem 1rem 2rem 1rem;
+    }
+
+    .flexed-contact-div #contact-img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contact-section #contact-heading {
+        font-size: 2.5rem;
+    }
+
+    .contact-section #contact {
+        font-size: 1.4rem;
+    }
+
+    .contact .social-list-inline .icon {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .flexed-contact-div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flexed-contact-div #contact-img {
+        margin: 0rem 1.5rem;
+        width: 450px;
+        height: 350px;
+    }
+
+    .contact-section {
+        margin: 0;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .contact-section .contact {
+        margin: 2rem 1rem 0rem 1rem;
+        text-align: center;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 1.4rem;
+    }
+}
+ 
+@media only screen and (max-width: 520px) { 
+    .flexed-contact-div #contact-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact-section #contact-heading {
+        font-size: 2.2rem;
+    }
+
+    .contact-section #contact {
+        font-size: 1.2rem;
+    }
+
+    .contact .social-list-inline .icon {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 1rem;
+    }
+
+    .contact .social-media {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 356px) { 
+    .flexed-contact-div #contact-img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/** Footer Section for Home page**/
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 0rem;
+    text-align: center;
+}
+
+body.dark-mode .footer {
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.footer .footer-link {
+    color: white;
+}
+
+.footer .footer-content {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+/** Responsive CSS for footer **/
+@media only screen and (max-width: 500px) { 
+    .footer-content p {
+        font-size: 0.9rem;
+        margin: 0.5rem 0.7rem;
+    }
+}

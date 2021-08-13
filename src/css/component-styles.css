@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+    --primary-color: #3B82F6;
+    --off-white: #F3F4F6;
+    --dark-mode: #292C35;
+    --ball-color: #fff;
+    --toggle-button-color: #111;
+    --blog-post-date-color: #999;
+}
+
+/** Body **/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark {
+	background: var(--dark-mode);
+}
+
+hr {
+    margin: 2rem 0.5rem;
+}
+/** Containers **/
+
+.container {
+    padding: 0rem 1rem;
+}
+
+.container-center {
+    max-width: 700px;
+    margin: auto;
+}
+
+/** Links **/
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.primary-link {
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.secondary-link {
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/** Lists **/
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+/** Navbar **/
+.navigation {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+}
+
+.navigation .nav-pills {
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.navigation .link {
+    color: white;
+}
+
+.nav-pills .list-inline {
+    padding: 0rem 1rem;
+}
+
+.navigation .link-active {
+    font-weight: bold;
+}
+
+/** Responsive CSS for Navbar**/
+@media only screen and (max-width: 700px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navigation .nav-pills {
+        padding-left: 0;
+        font-size: 0.7rem;
+    }
+
+    .nav-pills .list-inline {
+        padding: 0rem 0.5rem;
+    }
+
+    .nav-pills .link {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+/** Header **/
+.hero-container {
+    padding: 0rem 4rem;
+    /* margin: 1rem; */
+}
+
+.hero {
+   display: flex;
+}
+
+.hero div{
+    margin-right: 10rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero img{
+    height: 297px;
+    width: 287px;
+    border-radius: 50%;
+    border: 0.5px solid gray;
+    margin-left: 1.5rem;
+}
+
+.hero #header-name {
+    font-size: 4.5rem;
+    font-weight: 400;
+    /* height: 5rem; */
+    height: auto;
+    margin-bottom: 0.5rem;
+    /* word-wrap: normal; */
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.hero #header-tagline {
+    /* line-height: 0.2rem; */
+    font-size: 1.25rem;
+    word-wrap: break-word;
+    padding-left: 0.5rem;
+}
+
+/** Responsive CSS for Header**/
+@media only screen and (max-width: 1200px) {
+    .hero div{
+        margin-right: 7.5rem;
+    }
+    .hero-container {
+        padding-right: 2rem;
+        padding-left: 6rem;
+    }
+    .hero img {
+        height: 250px;
+        width: 235px;
+    }
+    .hero #header-name {
+        font-size: 4rem;
+    }
+    .hero #header-tagline {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero div{
+        margin: 0 auto;
+    }
+
+    .hero img {
+        height: 600px;
+        width: 567px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    .hero #header-name {
+        font-size: 4rem;
+    }
+    .hero #header-tagline {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero div{
+        margin: 0 auto;
+    }
+
+    .hero-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero img {
+        height: 250px;
+        width: 237px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    .hero #header-name {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .hero #header-tagline {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero div{
+        margin: 0 auto;
+    }
+
+    .hero-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero img {
+        height: 200px;
+        width: 187px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    .hero #header-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .hero #header-tagline {
+        font-size: 0.9rem;
+    }
+}
+
+/** Section **/
+.section {
+    padding: 2rem;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.off-white {
+    background-color: var(--off-white);
+}
+
+#section-heading {
+    font-size: 2rem;
+}
+
+/** Section for Personalized theme **/
+.section-theme {
+    padding: 1rem 2rem;
+}
+.section-theme .personalize-theme {
+    margin-left: auto;
+    width: 7rem;
+    padding: 0.5rem;
+}
+
+.personalize-theme .checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.personalize-theme .label {
+	background-color: var(--toggle-button-color);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 20px;
+	width: 48px;
+	transform: scale(1.5);
+}
+
+.personalize-theme .label .ball {
+	background-color: var(--ball-color);
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 20px;
+	width: 20px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.personalize-theme .checkbox:checked + .label .ball {
+	transform: translateX(30px);
+}
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+/** Responsive CSS for Personalize theme **/
+@media only screen and (max-width: 700px) {
+    .personalize-theme .label {
+        height: 15px;
+        width: 40px;
+    }
+
+    .personalize-theme .label .ball {
+        position: absolute;
+	    top: 4px;
+	    left: 5px;
+	    height: 17px;
+	    width: 17px;
+    }
+
+    .personalize-theme .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+}
+
+/** Projects Section **/
+.section .project-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.project-wrapper .project-tile {
+    margin: 2vh auto;
+    padding: 1vh;
+    text-align: center;
+}
+
+.project-wrapper .project-content {
+    display: flex;
+    border: 2px solid var(--dark-mode);
+    border-radius: 2vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    width: 65vw;
+}
+
+.project-content #project-img {
+    width: 55%;
+    margin: 1rem 0rem;
+}
+
+.project-content p {
+    margin: 1rem 0rem;
+}
+
+@media screen and (min-width: 600px) {
+    .project-wrapper .project-content {
+        display: flex;
+        border: 2px solid var(--dark-mode);
+        border-radius: 2vw;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh;
+        margin-top: 4vh;
+        margin-bottom: 6vh;
+        width: 50vw;
+    }
+}
+
+/** Blogs section **/
+.section .container-center {
+    max-width: 600px;
+    margin: auto;
+}
+
+.section .blog-post {
+    padding: 1.5rem;
+}
+
+.blog-post .blog-post-date {
+    color: var(--blog-post-date-color);
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    font-style: italic;
+}
+
+/** Responsive CSS for Blogs section**/
+@media only screen and (max-width: 1000px) {
+    .section .list-non-bullet {
+        padding: 0rem 1rem;
+    }
+
+    .section .container-center {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .section .container-center {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .section .container-center {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .section #section-heading {
+        font-size: 1.5rem;
+    }
+
+    .blog-post .blog-post-heading {
+        font-size: 1.3rem;
+    }
+
+    .blog-post .blog-post-date {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .section .container-center {
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+}
+
+/** Contact section on Home page **/
+.contact-section {
+    padding: 1.5rem 3rem;
+}
+
+.contact-section #contact-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.contact-section #contact {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.contact-section .contact {
+    margin: 2rem;
+    padding: 0rem 1rem;
+}
+
+.contact div {
+    padding: 1rem 0rem;
+}
+
+.contact #contact-heading {
+    margin: 1.5rem 0rem;
+}
+
+.contact .social-media {
+    padding: 1.5rem 0rem;
+}
+
+.contact .social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.contact .social-list-inline .icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+}
+.contact .social-list-inline .social-link {
+    text-decoration: none;
+}
+
+.contact .social-list-inline .icon ion-icon {
+    font-size: 1.6rem;
+}
+
+/* * Responsive CSS for Contact Section * */
+@media only screen and (max-width: 1025px) {
+    .contact-section {
+        margin: 0rem 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contact-section #contact-heading {
+        font-size: 3rem;
+    }
+
+    .contact-section #contact {
+        font-size: 1.2rem;
+    }
+
+    .contact .social-list-inline .icon {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .contact-section {
+        margin: 0;
+    }
+
+    .contact-section .contact {
+        margin: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 420px) { 
+    .contact-section {
+        margin: 0;
+    }
+
+    .contact-section .contact {
+        margin: 2rem 1rem;
+    }
+
+    .contact-section #contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-section #contact {
+        font-size: 1rem;
+    }
+
+    .contact .social-list-inline .icon {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
+    .contact .social-list-inline .icon ion-icon {
+        font-size: 0.8rem;
+    }
+}
+
+/** Footer Section for Home page**/
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 0rem;
+    text-align: center;
+}
+
+.footer .footer-link {
+    color: white;
+}
+
+.footer .footer-content {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+/** Responsive CSS for footer **/
+@media only screen and (max-width: 500px) { 
+    .footer-content p {
+        font-size: 0.9rem;
+        margin: 0.5rem 0.7rem;
+    }
+}
+
+/** Footer for other pages **/
+.footer .footer-content {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content .other-page-social-media {
+    padding: 0rem 1rem;
+    margin: 0.5rem 0rem;
+}
+
+.footer-content #other-page-footer-para {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+.footer-content .other-page-social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.footer-content .other-page-social-list-inline .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: var(--primary-color);
+    color: white;
+}
+
+.footer-content .other-page-social-list-inline .social-link {
+    text-decoration: none;
+}
+
+.footer-content .other-page-social-list-inline .icon ion-icon {
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 500px) { 
+    .footer-content #other-page-footer-para {
+        font-size: 0.8rem;
+        margin: 0.5rem 0.7rem;
+    }
+
+    .footer-content .other-page-social-list-inline .icon {
+        height: 1.9rem;
+        width: 1.9rem;
+    }
+
+    .footer-content .other-page-social-list-inline .icon ion-icon {
+        font-size: 1rem;
+    }   
+}
