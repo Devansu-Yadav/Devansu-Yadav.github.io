@@ -250,7 +250,30 @@ body.dark-mode #hero-image img {
     filter: contrast(1.2);
 }
 
-.hero #header-name {
+/* CSS for Typing effect */
+.hero .typing-container {
+    width: 600px;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.typing-container .input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 4rem;
+    background-color: var(--text-color);
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+.hero .header-name {
     font-size: 4.5rem;
     font-weight: 400;
     /* height: 5rem; */
@@ -258,6 +281,7 @@ body.dark-mode #hero-image img {
     height: auto;
     margin-bottom: 0.5rem;
     transition: color 0.5s;
+    padding-left: 0.6rem;
     /* word-wrap: normal; */
 }
 
@@ -286,9 +310,6 @@ body.dark-mode #hero-image img {
         height: 250px;
         width: 235px;
     }
-    .hero #header-name {
-        font-size: 4rem;
-    }
 }
 
 @media only screen and (max-width: 1032px) {
@@ -308,8 +329,13 @@ body.dark-mode #hero-image img {
         width: 567px;
     }
 
-    .hero #header-name {
+    .hero .header-name {
         font-size: 4rem;
+    }
+
+    .hero .typing-container {
+        padding-left: 0;
+        width: unset;
     }
 }
 
@@ -317,6 +343,10 @@ body.dark-mode #hero-image img {
     .hero-container {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .hero div {
+        margin-right: 0;
     }
 
     #hero-image img {
@@ -332,9 +362,14 @@ body.dark-mode #hero-image img {
 
 
 @media only screen and (max-width: 566px) {
-    .hero #header-name {
+    .hero .typing-container {
         text-align: left;
     }
+
+    .hero .header-name {
+        padding-left: 0;
+    }
+
     .hero #header-tagline {
         font-size: 1rem;
         text-align: left;
@@ -347,9 +382,12 @@ body.dark-mode #hero-image img {
 }
 
 @media only screen and (max-width: 350px) {
-
-    .hero #header-name {
+    .hero .header-name {
         font-size: 3rem;
+    }
+
+    .typing-container .input-cursor {
+        height: 3rem;
     }
 
     .hero div {

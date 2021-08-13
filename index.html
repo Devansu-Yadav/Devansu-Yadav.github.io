@@ -42,7 +42,11 @@
     <header class="hero-container">
         <div class="hero">
             <div>
-                <h1 id="header-name">Devansu Yadav</h1>
+                <h1 class="typing-container">
+                    <span id="sentence" class="header-name"></span>
+                    <span class="input-cursor"></span>     
+                </h1>
+                <script type="text/javascript" src="src/js/typingEffect.js"></script>
                 <p id="header-tagline">Web Developer | Hackathons👨‍💻 | 💝Open Source<p>
             </div>
             <div id="hero-image">
@@ -50,6 +54,17 @@
             </div>
         </div>
     </header>
+
+    <script>
+        (async function() {
+            while(true) {
+                await typeSentence("Devansu Yadav", document.querySelector("#sentence"));
+                await waitForMs(1500);
+                await deleteSentence(document.querySelector("#sentence"));
+                await waitForMs(500);
+            }
+        })();
+    </script>
 
     <section class="intro-section off-white">
         <div class="container intro-container">
