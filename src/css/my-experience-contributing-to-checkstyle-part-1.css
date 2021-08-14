@@ -511,7 +511,7 @@ body.dark-mode .footer-content .footer-link {
 
 @media only screen and (max-width: 500px) { 
     .footer-content #other-page-footer-para {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         margin: 0.5rem 0.7rem;
     }
 
@@ -521,6 +521,6 @@ body.dark-mode .footer-content .footer-link {
     }
 
     .footer-content .other-page-social-list-inline .icon ion-icon {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }   
 }

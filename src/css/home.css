@@ -451,6 +451,10 @@ body.dark-mode .intro-section {
     margin-bottom: auto;
 }
 
+.intro-content #section-heading {
+    font-size: 2.5rem;
+}
+
 .intro-container .learn-more {
     margin-top: auto;
     margin-bottom: auto;
@@ -561,17 +565,8 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover
         font-size: 0.8rem;
     }
 
-    .intro-content .intro-social-list-inline .intro-icon {
-        height: 2.8rem;
-        width: 2.8rem;
-    }
-
-    .intro-content .intro-social-list-inline .intro-icon ion-icon {
-        font-size: 1.4rem;
-    }
-
     .intro-content #section-heading {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
     }
 }
 
@@ -593,16 +588,16 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover
     }
 
     .intro-content .intro-social-list-inline .intro-icon {
-        height: 2rem;
-        width: 2rem;
+        height: 2.8rem;
+        width: 2.8rem;
     }
 
     .intro-content .intro-social-list-inline .intro-icon ion-icon {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .intro-content #section-heading {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 }
 
@@ -620,6 +615,10 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover
 
     .intro-content #section-heading {
         text-align: center;
+    }
+
+    .intro-content .intro-social-list-inline {
+        padding: 0rem 0.2rem;
     }
 
     .intro-container .learn-more {
@@ -645,7 +644,7 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover
     }
     
     .intro-content #section-heading {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .intro-container .learn-more {
@@ -661,12 +660,12 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-social-link:hover
     }
 
     .intro-content .intro-social-list-inline .intro-icon {
-        height: 1.7rem;
-        width: 1.7rem;
+        height: 2rem;
+        width: 2rem;
     }
 
     .intro-content .intro-social-list-inline .intro-icon ion-icon {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -842,7 +841,7 @@ body.dark-mode .blog-section-home .more-blogs-link:hover {
     }
 
     .blog-section-home #blog-section-heading-home {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 900;
     }
 
@@ -861,7 +860,7 @@ body.dark-mode .blog-section-home .more-blogs-link:hover {
     }
 
     .blog-section-home #blog-section-heading-home {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .blog-post .blog-img {
@@ -885,7 +884,6 @@ body.dark-mode .blog-section-home .more-blogs-link:hover {
     }
 }
 
-
 @media only screen and (max-width: 400px) {
     .blog-section-home {
         padding: 1rem;
@@ -900,7 +898,7 @@ body.dark-mode .blog-section-home .more-blogs-link:hover {
     }
     
     .blog-section-home #blog-section-heading-home {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .blog-post .blog-img {
@@ -1037,19 +1035,6 @@ body.dark-mode .contact .social-list-inline .social-link:hover {
 
     .contact-section #contact {
         font-size: 1.6rem;
-    }    
-
-    .contact .social-list-inline .icon {
-        height: 2.8rem;
-        width: 2.5rem;
-    }
-
-    .contact .social-list-inline .icon ion-icon {
-        font-size: 1.5rem;
-    }
-
-    .contact .social-list-inline {
-        padding: 0rem 0.2rem;
     }
 }
 
@@ -1076,16 +1061,20 @@ body.dark-mode .contact .social-list-inline .social-link:hover {
     }
 
     .contact .social-list-inline .icon {
-        height: 2.4rem;
-        width: 2.4rem;
+        height: 2.8rem;
+        width: 2.5rem;
     }
 
     .contact .social-list-inline .icon ion-icon {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    .contact .social-list-inline {
+        padding: 0rem 0.2rem;
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 728px) {
     .flexed-contact-div {
         flex-direction: column;
         justify-content: center;
@@ -1108,8 +1097,9 @@ body.dark-mode .contact .social-list-inline .social-link:hover {
         text-align: center;
     }
 
-    .contact .social-list-inline .icon ion-icon {
-        font-size: 1.4rem;
+    .contact .social-list-inline .icon {
+        height: 2.4rem;
+        width: 2.4rem;
     }
 }
  
@@ -1125,15 +1115,6 @@ body.dark-mode .contact .social-list-inline .social-link:hover {
 
     .contact-section #contact {
         font-size: 1.2rem;
-    }
-
-    .contact .social-list-inline .icon {
-        height: 1.7rem;
-        width: 1.7rem;
-    }
-
-    .contact .social-list-inline .icon ion-icon {
-        font-size: 1rem;
     }
 
     .contact .social-media {
