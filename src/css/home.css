@@ -20,7 +20,7 @@ body {
     --bkg-color: #fff;
     --primary-color: #3B82F6;
     --off-white: #F3F4F6;
-    --heading-text-color: black;
+    --heading-text-color: var(--text-color);         /* O.G - black */
     /* Personalize theme vars */
     --toggle-button-bg-color: #e9f5ff;
     --toggle-button-dark-bg-color: #404852;
@@ -81,7 +81,7 @@ body.dark-mode {
         --bkg-color: #fff;
         --primary-color: #3B82F6;
         --off-white: #F3F4F6;
-        --heading-text-color: black;
+        --heading-text-color: var(--text-color);         /* O.G - black */
         /* Personalize theme vars */
         --toggle-button-bg-color: #e9f5ff;
         --toggle-button-dark-bg-color: #404852;
@@ -428,6 +428,13 @@ body.dark-mode #section-heading{
     margin: 3rem 0rem;
 }
 
+body.light-mode .intro-section {
+    background-color: var(--off-white);
+    color: var(--text-color);
+    border: none;
+    transition: color 0.5s, background-color 0.5s;
+}
+
 body.dark-mode .intro-section {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -488,6 +495,13 @@ body.dark-mode .intro-section {
     transition: color 0.5s, background-color 0.5s, border 0.5s;
 }
 
+body.light-mode .learn-more a:hover {
+    color: var(--primary-color);
+    background-color: var(--bkg-color);
+    border: 1px solid var(--primary-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
 body.dark-mode .learn-more a:hover {
     background-color: var(--text-color);
     transition: background-color 0.5s;
@@ -513,6 +527,12 @@ body.dark-mode .learn-more a:hover {
     color: var(--primary-color);
 }
 
+body.light-mode .intro-content .intro-social-list-inline .intro-icon {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+    transition: color 0.5s, background-color 0.5s;
+}
+
 body.dark-mode .intro-content .intro-social-list-inline .intro-icon {
     background: var(--secondary-color);
     color: var(--text-color);
@@ -524,6 +544,11 @@ body.dark-mode .intro-content .intro-social-list-inline .intro-icon {
 }
 
 .intro-content .intro-social-list-inline .intro-social-link:hover {
+    color: black;
+    transition: color 0.8s;
+}
+
+body.light-mode .intro-content .intro-social-list-inline .intro-social-link:hover {
     color: black;
     transition: color 0.8s;
 }
@@ -923,6 +948,7 @@ body.dark-mode .blog-section-home .more-blogs-link:hover {
 /** Contact section on Home page **/
 .contact-section {
     padding: 1.5rem 3rem;
+    background-color: var(--off-white);
 }
 
 body.dark-mode .contact-section {
