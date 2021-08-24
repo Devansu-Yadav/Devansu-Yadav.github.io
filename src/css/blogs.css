@@ -12,60 +12,114 @@ body {
     --bkg-color: #fff;
     --primary-color: #3B82F6;
     --off-white: #F3F4F6;
-    --heading-text-color: black;
+    --heading-text-color: var(--text-color);
+    --border-color: none;
+
     /* Personalize theme vars */
     --toggle-button-bg-color: #e9f5ff;
-    --toggle-button-dark-bg-color: #404852;
-    --brightness-icon-color: #fff;
+    --icon-color: var(--primary-color);
+
+    /* Links */
+    --link-color: var(--primary-color);
+    --secondary-link-color: var(--primary-color);
+
     /* Navbar vars */
     --nav-bg-color: var(--primary-color);
     --nav-hover-color: var(--primary-color);
+    --nav-hover-bg-color: #fff;
     --nav-border-color: none;
+
+    /* Social media icons vars */
+    --social-icon-hover-color: black;
+
+    /* Footer */
+    --footer-bg-color: var(--primary-color);
 
     /* Blog variables */
     --blog-post-date-color: #999;
+    --blog-post-bg-color: #fff;
     --blog-post-link: #111;
+
+    /* Required CSS */
+    --img-filter-value: none;
+    --content-value: "\f186";
 }
 
 body.dark-mode {
     --text-color: #eee;
     --bkg-color: #121212;   /*#121212  #15202b*/
+    --primary-color: #111827;
+    --off-white: var(--primary-color);
     --heading-text-color: var(--text-color);
-    --secondary-color: var(--nav-bg-color);
     --border-color: #6B7280;
+
+    /* Personalize theme vars */
+    --toggle-button-bg-color: #404852;
+    --icon-color: #fff;
+
+    /* Links */
+    --link-color: var(--text-color);
+    --secondary-link-color: #3B82F6;
 
     /* Navbar vars */
     --nav-bg-color: #111827;  /*#111827 #2C3750*/
     --nav-hover-color: var(--bkg-color);
-    --nav-border-color: var(--border-color);
+    --nav-hover-bg-color: #fff;
+    --nav-border-color: #6B7280;
     
     /* Social media icons vars */
-    --social-icon-hover-color: var(--primary-color);
+    --social-icon-hover-color: #3B82F6;
 
     /* Blog variables */
     --blog-post-date-color: #D1D5DB;
+    --blog-post-bg-color: var(--primary-color);
     --blog-post-link: var(--text-color);
+
+    /* Footer */
+    --footer-bg-color: var(--bkg-color);
+
+    /* Required CSS */
+    --img-filter-value: contrast(1.2);
+    --content-value: "\f185";
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         --text-color: #eee;
         --bkg-color: #121212;   /*#121212  #15202b*/
+        --primary-color: #111827;
+        --off-white: var(--primary-color);
         --heading-text-color: var(--text-color);
-        --secondary-color: var(--nav-bg-color);
         --border-color: #6B7280;
-        
+
+        /* Personalize theme vars */
+        --toggle-button-bg-color: #404852;
+        --icon-color: #fff;
+
+        /* Links */
+        --link-color: var(--text-color);
+        --secondary-link-color: #3B82F6;
+
         /* Navbar vars */
         --nav-bg-color: #111827;  /*#111827 #2C3750*/
         --nav-hover-color: var(--bkg-color);
-        --nav-border-color: var(--border-color);
-
+        --nav-hover-bg-color: #fff;
+        --nav-border-color: #6B7280;
+        
         /* Social media icons vars */
-        --social-icon-hover-color: var(--nav-border-color);
+        --social-icon-hover-color: #3B82F6;
 
         /* Blog variables */
         --blog-post-date-color: #D1D5DB;
+        --blog-post-bg-color: var(--primary-color);
         --blog-post-link: var(--text-color);
+
+        /* Footer */
+        --footer-bg-color: var(--bkg-color);
+
+        /* Required CSS */
+        --img-filter-value: contrast(1.2);
+        --content-value: "\f185";
     }
 
     body.light-mode {
@@ -73,19 +127,37 @@ body.dark-mode {
         --bkg-color: #fff;
         --primary-color: #3B82F6;
         --off-white: #F3F4F6;
-        --heading-text-color: black;
+        --heading-text-color: var(--text-color);
+        --border-color: none;
+
         /* Personalize theme vars */
         --toggle-button-bg-color: #e9f5ff;
-        --toggle-button-dark-bg-color: #404852;
-        --brightness-icon-color: #fff;
+        --icon-color: var(--primary-color);
+
+        /* Links */
+        --link-color: var(--primary-color);
+        --secondary-link-color: var(--primary-color);
+        
         /* Navbar vars */
         --nav-bg-color: var(--primary-color);
         --nav-hover-color: var(--primary-color);
+        --nav-hover-bg-color: #fff;
         --nav-border-color: none;
+
+        /* Social media icons vars */
+        --social-icon-hover-color: black;
+
+        /* Footer */
+        --footer-bg-color: var(--primary-color);
 
         /* Blog variables */
         --blog-post-date-color: #999;
+        --blog-post-bg-color: #fff;
         --blog-post-link: #111;
+
+        /* Required CSS */
+        --img-filter-value: none;
+        --content-value: "\f186";
     }
 }
 
@@ -114,15 +186,10 @@ body {
 }
 
 .primary-link {
-    color: white;
-    background-color: var(--primary-color);
+    color: var(--bkg-color);
+    background-color: var(--link-color);
     font-size: 1.2rem;
     border-radius: 0.5rem;
-}
-
-body.dark-mode .primary-link {
-    color: var(--bkg-color);
-    background-color: var(--text-color);
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -162,7 +229,7 @@ body.dark-mode .primary-link {
 
 .navigation .link:hover {
     color: var(--nav-hover-color);
-    background-color: var(--brightness-icon-color);
+    background-color: var(--nav-hover-bg-color);
     border-radius: 1.5rem;
 }
 
@@ -221,13 +288,9 @@ body.dark-mode .primary-link {
 
 #section-heading {
     font-size: 2rem;
-}
-
-body.dark-mode #section-heading{
     color: var(--heading-text-color);
     transition: color 0.5s;
 }
-
 
 /** Section for Personalized theme **/
 .section-theme {
@@ -253,24 +316,13 @@ body.dark-mode #section-heading{
 }
 
 .toggle::before {
-    content: "\f186";
+    content: var(--content-value);
     font-size: 1.2rem;
 	font-family: "Font Awesome 5 Free";
-	color: var(--primary-color);
+	color: var(--icon-color);
 	position: center;
-}
-
-body.dark-mode .toggle {
-    background: var(--toggle-button-dark-bg-color);
-    transition: background 0.5s;
-}
-
-body.dark-mode .toggle::before {
-    content: "\f185";
-	color: var(--brightness-icon-color);
     transition: color 0.5s;
 }
-
 
 /** Responsive CSS for Personalize theme **/
 @media only screen and (max-width: 430px) {
@@ -297,9 +349,6 @@ body.dark-mode .toggle::before {
 #blog-section-heading-home {
     font-size: 3rem;
     text-align: center;
-}
-
-body.dark-mode #blog-section-heading-home {
     color: var(--text-color);
     transition: color 0.5s;
 }
@@ -308,52 +357,27 @@ body.dark-mode #blog-section-heading-home {
     padding: 1.5rem;
     border: 2px solid var(--text-color);
     border-radius: 1.5rem;
+    background-color: var(--blog-post-bg-color);
 }
 
- .blog-section-home .blog-post:hover {
+.blog-section-home .blog-post:hover {
     background-color: var(--heading-text-color);
 }
 
- .blog-section-home .blog-post:hover .blog-post-date {
+.blog-section-home .blog-post:hover .blog-post-date {
     color: var(--bkg-color);
 }
 
- .blog-section-home .blog-post:hover img {
+.blog-section-home .blog-post:hover img {
     border: none;
 }
 
- .blog-section-home .blog-post:hover .post-link {
+.blog-section-home .blog-post:hover .post-link {
     color: var(--bkg-color);
 }
 
- .blog-section-home .blog-post:hover .post-link:hover {
-    color: var(--primary-color);
-}
-
-body.dark-mode .blog-section-home .blog-post {
-    border: 2px solid var(--text-color);
-    border-radius: 1.5rem;
-    background-color: var(--nav-bg-color);
-}
-
-body.dark-mode .blog-section-home .blog-post:hover {
-    background-color: var(--text-color);
-}
-
-body.dark-mode .blog-section-home .blog-post:hover .blog-post-date {
-    color: var(--bkg-color);
-}
-
-body.dark-mode .blog-section-home .blog-post:hover img {
-    border: none;
-}
-
-body.dark-mode .blog-section-home .blog-post:hover .post-link {
-    color: var(--bkg-color);
-}
-
-body.dark-mode .blog-section-home .blog-post:hover .post-link:hover {
-    color: var(--primary-color);
+.blog-section-home .blog-post:hover .post-link:hover {
+    color: var(--secondary-link-color);
 }
 
 .blog-section-home li {
@@ -371,7 +395,7 @@ body.dark-mode .blog-section-home .blog-post:hover .post-link:hover {
     transition: color 0.5s;
 }
 
-body.dark-mode .blog-post img {
+.blog-post img {
     border: 1px solid var(--border-color);
     transition: border 0.5s;
 }
@@ -382,7 +406,7 @@ body.dark-mode .blog-post img {
 }
 
 .blog-post .post-link:hover {
-    color: var(--primary-color);
+    color: var(--secondary-link-color);
     transition: color 0.6s;
 }
 
@@ -522,12 +546,7 @@ body.dark-mode .blog-post img {
     padding: 0.5rem 0rem;
     text-align: center;
     margin-top: 4rem;
-}
-
-body.dark-mode .footer {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-top: 1px solid var(--text-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer .footer-content {
@@ -565,23 +584,13 @@ body.dark-mode .footer {
     color: white;
 }
 
-body.dark-mode .footer-content .other-page-social-list-inline .icon {
-    background: var(--secondary-color);
-    color: var(--text-color);
-}
-
 .footer-content .other-page-social-list-inline .icon ion-icon:hover {
-    color: var(--text-color);
+    color: var(--social-icon-hover-color);
     transition: color 0.5s;
 }
 
-body.dark-mode .footer-content .other-page-social-list-inline .icon ion-icon:hover {
-    color: var(--primary-color);
-    transition: color 0.5s;
-}
-
-body.dark-mode .footer-content .footer-link {
-    color: var(--text-color);
+.footer-content .footer-link {
+    color: var(--nav-hover-bg-color);
 } 
 
 .footer-content .other-page-social-list-inline .social-link {
