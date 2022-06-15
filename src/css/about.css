@@ -402,7 +402,7 @@ body {
 }
 
 .intro-content #intro-heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .intro-img img {
@@ -429,25 +429,51 @@ body {
     color: var(--text-color);
 }
 
-.intro-container .view-resume {
-    margin: auto;
+/* Experience Section */
+.experience-section {
+    padding: 0rem 4rem 0rem 4rem;
+    margin: 2rem auto;
+    width: 70vw;
+    color: var(--text-color);
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
 }
 
-.view-resume a {
-    display: block;
+.experience-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.view-resume .link-1 {
-    width: fit-content;
+.experience-section #experience-heading {
+    font-size: 2.5rem;
 }
 
-.view-resume a:hover {
-    color: var(--secondary-link-color);
-    background-color: var(--nav-hover-bg-color);
-    border: 1px solid var(--secondary-link-color);
-    transition: color 0.5s, background-color 0.5s;
+.resume-item {
+    margin: 1rem 2rem;
 }
 
+.experience-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-title-text {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.experience-date {
+    font-size: 1rem;
+}
 
 /* Skills section */
 #skills-heading {
@@ -540,7 +566,7 @@ body {
 
 /* Communities section */
 .communities {
-    margin: 3rem 0rem;
+    margin-top: 3rem;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     background-color: var(--off-white);
@@ -570,9 +596,24 @@ body {
     margin: 2rem;
 }
 
+.community-logos .neoGcamp-logo {
+    height: 9vh;
+}
+
 /* Responsive CSS for All sections */
+@media only screen and (max-width: 1035px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media only screen and (max-width: 720px) {
     .intro-section {
+        width: 80vw;
+    }
+
+    .experience-section {
         width: 80vw;
     }
 
@@ -590,8 +631,12 @@ body {
         padding: 0rem 2rem 0rem 2rem;
     }
 
+    .experience-section {
+        padding: 0rem 2rem 0rem 2rem;
+    }
+
     .intro-content #intro-heading {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .intro-content .intro {
@@ -626,10 +671,26 @@ body {
         max-width: 40vw;
         max-height: 40vh;
     }
+
+    .experience-section #experience-heading {
+        font-size: 1.8rem;
+    }
+
+    .experience-title-text {
+        font-size: 1.3rem;
+    }
+
+    .experience-details {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .intro-section {
+        padding: 0rem 1rem 0rem 1rem;
+    }
+
+    .experience-section {
         padding: 0rem 1rem 0rem 1rem;
     }
 
@@ -638,7 +699,7 @@ body {
     }
 
     .intro-content #intro-heading {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .intro-img img {
@@ -658,11 +719,35 @@ body {
     .tools-section .languages  {
         width: 55%;
     }
+
+    .experience-section {
+        padding: 0;
+    }
+
+    .experience-section #experience-heading {
+        font-size: 1.4rem;
+    }
+
+    .experience-title-text {
+        font-size: 1.1rem;
+    }
+
+    .experience-details {
+        font-size: 0.8rem;
+    }
 }
 
-@media only screen and (max-width: 366px) {
+@media only screen and (max-width: 381px) {
     .intro-section {
-        width: 92vw;
+        width: 95vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .experience-section {
+        width: 95vw;
+        padding: 0;
+        margin: 0;
     }
 
     .skills-section .languages {
@@ -676,7 +761,6 @@ body {
     color: white;
     padding: 0.5rem 0rem;
     text-align: center;
-    margin-top: 6rem;
     border-top: 1px solid var(--border-color);
 }
 
